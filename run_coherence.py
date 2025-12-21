@@ -69,8 +69,6 @@ def calculate_nli():
     return jA.evaluate()
 
 
-
-
 def compute_coherence(pos_flat, neg_flat, alpha=0.5):
     pos_pairs = to_pairs(pos_flat)
     neg_pairs = to_pairs(neg_flat)
@@ -82,7 +80,7 @@ def compute_coherence(pos_flat, neg_flat, alpha=0.5):
 
         pos_mean = np.mean(pos_vals) if pos_vals else 0.0
         neg_mean = np.mean(neg_vals) if neg_vals else 0.0
-
+    #0.5
         score = alpha * pos_mean + (1 - alpha) * (1 - neg_mean)
         results[idx] = round(float(score), 4)
 
@@ -100,7 +98,7 @@ if __name__ == "__main__":
     # print("Coherence Scores:", ans1,ans2)
     final_coherence = compute_coherence(ans1,ans2,alpha=ALPHA)
     c_path = ALPHA_S * np.array(ans) + ALPHA_N * np.array(list(final_coherence.values()))
-    print("CPath Scores:", c_path)
+    print(np.sum(c_path)/len(c_path))
     
 
 

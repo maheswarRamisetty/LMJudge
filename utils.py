@@ -22,3 +22,35 @@ def to_pairs(flat):
         pairs.append((idx, vals))
         i += 2
     return pairs
+
+def parse_json(json_str: str) -> str:
+    if not isinstance(json_str, str):
+        return ""
+
+    json_str = json_str.strip()
+    try:
+        data = json.loads(json_str)
+        if isinstance(data, dict):
+            return data.get("reasoning", "")
+        return ""
+    except Exception:
+        pass
+
+    match = re.search(
+        r'"reasoning"\s*:\s*"(.+?)"\s*,\s*"table_data"',
+        json_str,
+        re.DOTALL
+    )
+    if match:
+        return match.group(1).strip()
+
+    match = re.search(
+        r'"reasoning"\s*:\s*"(.+)',
+        json_str,
+        re.DOTALL
+    )
+    if match:
+        return match.group(1).strip().rstrip('"').rstrip('}')
+
+    # Give up safely
+    return ""

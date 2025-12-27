@@ -2,7 +2,9 @@ import spacy
 import re
 from typing import List
 from sentence_transformers import SentenceTransformer, util
+import torch
 from relevance.base_relevance import BaseRelevance
+from utils import cos_sim
 
 
 class SemanticRelevanceModule(BaseRelevance):
@@ -10,56 +12,63 @@ class SemanticRelevanceModule(BaseRelevance):
         self,
         spacy_model="en_core_web_sm",
         embed_model="all-MiniLM-L6-v2",
-        threshold=0.5,
+        threshold=0.3,
     ):
         self.nlp = spacy.load(spacy_model)
         self.embedder = SentenceTransformer(embed_model)
-        self.threshold=threshold
+        self.threshold = threshold
+    def compute_relevance(
+        self, conversation: str, summary: str, judgment: str
+    ) -> float:
 
-    def compute_relevance(self, conversation: str, judgment: str) -> float:
-        context_elements = self._extract(conversation)
-        judgment_elements = self._extract(judgment)
+        J = self._extract(judgment)
+        C = self._extract(conversation)
+        S = self._extract(summary)
 
-        element_score = 0.0
-        if judgment_elements:
-            ctx_emb = self.embedder.encode(context_elements, convert_to_tensor=True)
-            jud_emb = self.embedder.encode(judgment_elements, convert_to_tensor=True)
-            sim = util.cos_sim(jud_emb, ctx_emb)
-            matched = 0
-            for i in range(len(judgment_elements)):
-                if float(sim[i].max()) >= 0.45:
-                    matched += 1
-            element_score = matched / len(judgment_elements)
+        if not J:
+            return 0.0
+        
+        print(self.threshold)
+        return (
+            self.threshold * self._weighted_jaccard(J, C)
+            + (1 - self.threshold) * self._weighted_jaccard(J, S)
+        )
 
-        conv_sents = [sent.text for sent in self.nlp(conversation).sents]
-        jud_sents = [sent.text for sent in self.nlp(judgment).sents]
+    def _weighted_jaccard(self, A: List[str], B: List[str]) -> float:
+        if not A or not B:
+            return 0.0
 
-        sentence_score = 0.0
-        if jud_sents:
-            conv_emb = self.embedder.encode(conv_sents, convert_to_tensor=True)
-            jud_emb = self.embedder.encode(jud_sents, convert_to_tensor=True)
-            sim = util.cos_sim(jud_emb, conv_emb)
-            matched = 0
-            for i in range(len(jud_sents)):
-                if float(sim[i].max()) >= self.threshold:
-                    matched += 1
-            sentence_score = matched / len(jud_sents)
+        A_emb = self.embedder.encode(A, convert_to_tensor=True)
+        B_emb = self.embedder.encode(B, convert_to_tensor=True)
 
-        return 0.6 * element_score + 0.4 * sentence_score
+        sim = cos_sim(A_emb, B_emb)  
+        max_sim, _ = torch.max(sim, dim=1)
+
+        intersection = max_sim.sum().item()
+        union = len(A) + len(B) - intersection
+
+        return intersection / union if union > 0 else 0.0
 
     def _extract(self, text: str) -> List[str]:
         doc = self.nlp(text.lower())
         elements = set()
+
         for ent in doc.ents:
             elements.add(self._norm(ent.text, ent.label_))
+
         for chunk in doc.noun_chunks:
             if 1 <= len(chunk.text.split()) <= 3 and not chunk.root.is_stop:
                 norm = re.sub(r"[^\w\s-]", "", chunk.text)
-                norm = re.sub(r"\s+", "_", norm)
-                elements.add(norm)
+                elements.add(norm.replace(" ", "_"))
+
         for token in doc:
-            if token.pos_ == "VERB" and token.lemma_ not in {"be", "have", "do", "say", "go"} and not token.is_stop:
+            if (
+                token.pos_ == "VERB"
+                and not token.is_stop
+                and token.lemma_ not in {"be", "have", "do"}
+            ):
                 elements.add(token.lemma_)
+
         return list(elements)
 
     def _norm(self, text: str, label: str) -> str:

@@ -74,7 +74,7 @@ def main():
         # turn for Accuracy Module
         logger.info("Turn for Accuracy Module")
         
-        aM = AccuracyCalculator
+        aM = AccuracyCalculator()
         result = aM.compute_accuracy(
             conversation_text=c,
             judgment_text=judgment,

@@ -20,6 +20,11 @@ class FactualElement:
     value: Any = None
     metadata: Dict = None
 
+@dataclass
+class Response:
+    text:str 
+    ok:bool=False
+
 class AccuracyCalculator:    
     def __init__(self, 
                  model_name: str = "en_core_web_sm",
@@ -53,7 +58,7 @@ class AccuracyCalculator:
         
         facts.extend(self._extract_with_rules(text, doc))
         
-        if self.ner_pipeline and len(text) < 512: # Limit for transformer
+        if self.ner_pipeline and len(text) < 512: 
             facts.extend(self._extract_with_transformers(text))
         
         facts = self._deduplicate_facts(facts)
@@ -276,8 +281,8 @@ class AccuracyCalculator:
         if ref_embeddings.size(0) == 0 or cand_embeddings.size(0) == 0:
             return [], 0.0
 
-        cosine_scores = util.cos_sim(ref_embeddings, cand_embeddings)
-
+        from utils.utils import cosine_sim
+        cosine_scores = cosine_sim(ref_embeddings, cand_embeddings)
     
         cand_matched = set()
         
@@ -367,7 +372,6 @@ class AccuracyCalculator:
             'reference_facts': [{'text': f.text, 'normalized': f.normalized} for f in ref_facts],
             'candidate_facts': [{'text': f.text, 'normalized': f.normalized} for f in cand_facts]
         }
-
 
 if __name__ == "__main__":
     calculator = AccuracyCalculator()

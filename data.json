@@ -1,0 +1,3076 @@
+[
+  {
+    "id": 0,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.867,
+        "score": 0.845
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.756,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.934,
+        "score": 0.853
+      },
+      "J_score": 0.881,
+      "JCJS": 0.863,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about reducing pollution and carpooling responsibilities."
+    }
+  },
+  {
+    "id": 1,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.789,
+        "Dr": 0.856,
+        "score": 0.882
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.819,
+        "score": 0.859
+      },
+      "J_score": 0.893,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the conversation, summary, and judgment, with high accuracy, relevance, and completeness. The entailment score suggests that the conversation logically necessitates the judgment, and the clarity scores indicate that the text is well-structured and easy to understand."
+    }
+  },
+  {
+    "id": 2,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.911,
+        "score": 0.859
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.856,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.934,
+        "score": 0.853
+      },
+      "J_score": 0.876,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical flow of information."
+    }
+  },
+  {
+    "id": 3,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.714,
+      "C_path": 0.643,
+      "Accuracy": 0.933,
+      "Relevance": 0.886,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.75,
+        "Dr": 0.625,
+        "score": 0.75
+      },
+      "Clarity": {
+        "Readability": 0.875,
+        "Syntactic_Simplicity": 0.875,
+        "Disambiguation": 0.75,
+        "Pronoun_Clarity": 0.875,
+        "score": 0.844
+      },
+      "J_score": 0.829,
+      "JCJS": 0.814,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, despite some minor discrepancies in entity recall and discourse unit flow."
+    }
+  },
+  {
+    "id": 4,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.612,
+      "Accuracy": 0.935,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.821,
+        "Er": 0.0,
+        "Dr": 0.0,
+        "score": 0.273
+      },
+      "Clarity": {
+        "Readability": 0.812,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.854,
+        "Pronoun_Clarity": 0.789,
+        "score": 0.839
+      },
+      "J_score": 0.783,
+      "JCJS": 0.751,
+      "Reasoning_Summary": "The JCJS score reflects a moderate to high level of coherence between the conversation, summary, and judgment, with the model effectively capturing semantic intent and thematic overlap despite some discrepancies in entity recall and discourse unit flow."
+    }
+  },
+  {
+    "id": 5,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.819,
+        "score": 0.858
+      },
+      "Clarity": {
+        "Readability": 0.921,
+        "Syntactic_Simplicity": 0.889,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.895,
+        "score": 0.895
+      },
+      "J_score": 0.883,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key points such as the introduction, cultural exchange, and future plans being accurately captured. The judgment is logically entailed by the conversation, and the completeness score reflects the effective recall of core intents and entities."
+    }
+  },
+  {
+    "id": 6,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.911,
+        "score": 0.859
+      },
+      "Clarity": {
+        "Readability": 0.921,
+        "Syntactic_Simplicity": 0.876,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.934,
+        "score": 0.908
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with the judgment logically entailed by the conversation. The completeness and clarity scores also indicate a well-structured and easy-to-understand summary."
+    }
+  },
+  {
+    "id": 7,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.753,
+      "C_path": 0.821,
+      "Accuracy": 0.938,
+      "Relevance": 0.917,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.0,
+        "Dr": 0.75,
+        "score": 0.875
+      },
+      "Clarity": {
+        "Readability": 0.812,
+        "Syntactic_Simplicity": 0.859,
+        "Disambiguation": 0.906,
+        "Pronoun_Clarity": 0.781,
+        "score": 0.839
+      },
+      "J_score": 0.854,
+      "JCJS": 0.863,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, indicating a coherent and relevant discussion about the ethical dilemma of lying to benefit others."
+    }
+  },
+  {
+    "id": 8,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.923,
+        "score": 0.893
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.854,
+        "Pronoun_Clarity": 0.892,
+        "score": 0.866
+      },
+      "J_score": 0.901,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about the house purchase negotiation."
+    }
+  },
+  {
+    "id": 9,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.869,
+        "Er": 0.753,
+        "Dr": 0.821,
+        "score": 0.814
+      },
+      "Clarity": {
+        "Readability": 0.739,
+        "Syntactic_Simplicity": 0.658,
+        "Disambiguation": 0.821,
+        "Pronoun_Clarity": 0.753,
+        "score": 0.743
+      },
+      "J_score": 0.853,
+      "JCJS": 0.826,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the Conversation, Summary, and Judgment, with high accuracy and relevance. The completeness score suggests that core intents and critical entities are well-captured. The NLI entailment score implies a logical connection between the Conversation and Judgment."
+    }
+  },
+  {
+    "id": 10,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.895,
+        "Er": 0.935,
+        "Dr": 0.889,
+        "score": 0.906
+      },
+      "Clarity": {
+        "Readability": 0.854,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.886
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant relationship among them."
+    }
+  },
+  {
+    "id": 11,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.846,
+        "Dr": 0.923,
+        "score": 0.886
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.857,
+        "Pronoun_Clarity": 0.846,
+        "score": 0.856
+      },
+      "J_score": 0.893,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about the electrical issue and its resolution."
+    }
+  },
+  {
+    "id": 12,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.911,
+        "score": 0.859
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.862
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The high JCJS score indicates strong semantic coherence between the conversation, summary, and judgment, reflecting a logical and thematically consistent narrative where the friends' reflections on life choices and outcomes align with their expressed gratitude and contentment."
+    }
+  },
+  {
+    "id": 13,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.876,
+        "Dr": 0.895,
+        "score": 0.897
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.853,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.878,
+        "score": 0.863
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, capturing the core intents and entities involved in the dialogue."
+    }
+  },
+  {
+    "id": 14,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.911,
+        "score": 0.9
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.869,
+        "Pronoun_Clarity": 0.851,
+        "score": 0.853
+      },
+      "J_score": 0.882,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The high JCJS score indicates a strong semantic mapping between the conversation, summary, and judgment, with the model effectively capturing the core intents, entities, and discourse units. The NLI entailment score suggests a logical connection between the conversation and judgment, while the clarity scores reflect the simplicity and readability of the text."
+    }
+  },
+  {
+    "id": 15,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.912,
+      "Accuracy": 0.967,
+      "Relevance": 0.935,
+      "Completeness": {
+        "Sr": 0.95,
+        "Er": 0.92,
+        "Dr": 0.91,
+        "score": 0.926
+      },
+      "Clarity": {
+        "Readability": 0.88,
+        "Syntactic_Simplicity": 0.85,
+        "Disambiguation": 0.92,
+        "Pronoun_Clarity": 0.89,
+        "score": 0.884
+      },
+      "J_score": 0.911,
+      "JCJS": 0.923,
+      "Reasoning_Summary": "The high scores reflect the strong semantic mapping between the conversation, summary, and judgment, capturing core intents, entities, and discourse flow, with logical entailment and good clarity."
+    }
+  },
+  {
+    "id": 16,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.923,
+        "score": 0.893
+      },
+      "Clarity": {
+        "Readability": 0.876,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.854,
+        "Pronoun_Clarity": 0.923,
+        "score": 0.889
+      },
+      "J_score": 0.901,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant relationship among them."
+    }
+  },
+  {
+    "id": 17,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.956,
+        "Dr": 0.879,
+        "score": 0.918
+      },
+      "Clarity": {
+        "Readability": 0.843,
+        "Syntactic_Simplicity": 0.912,
+        "Disambiguation": 0.895,
+        "Pronoun_Clarity": 0.821,
+        "score": 0.867
+      },
+      "J_score": 0.901,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical flow of information."
+    }
+  },
+  {
+    "id": 18,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.935,
+        "Er": 0.891,
+        "Dr": 0.876,
+        "score": 0.901
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.819,
+        "Pronoun_Clarity": 0.851,
+        "score": 0.841
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The Conversation and Summary align closely in terms of semantic intent, with the Judgment logically following from the discussion. The high scores reflect the coherence and completeness of the information exchange, with minor deductions for some implicit details and straightforward language usage."
+    }
+  },
+  {
+    "id": 19,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.819,
+      "Accuracy": 0.956,
+      "Relevance": 0.937,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.812,
+        "Dr": 0.906,
+        "score": 0.864
+      },
+      "Clarity": {
+        "Readability": 0.908,
+        "Syntactic_Simplicity": 0.923,
+        "Disambiguation": 0.895,
+        "Pronoun_Clarity": 0.911,
+        "score": 0.909
+      },
+      "J_score": 0.893,
+      "JCJS": 0.878,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key intents like Christmas preparations and gift wishes accurately captured. The judgment, while not explicitly stated, is logically entailed by the conversation's context, leading to a high NLI entailment score."
+    }
+  },
+  {
+    "id": 20,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.789,
+        "Dr": 0.856,
+        "score": 0.882
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.823,
+        "score": 0.855
+      },
+      "J_score": 0.893,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The Conversation and Summary align closely in terms of semantic intent, with the Judgment logically following from the situation described. The use of travel accident insurance to cover damage is a plausible next step, given the context of an accident occurring due to exhaustion."
+    }
+  },
+  {
+    "id": 21,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.753,
+      "C_path": 0.821,
+      "Accuracy": 0.938,
+      "Relevance": 0.917,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.812,
+        "Dr": 0.906,
+        "score": 0.864
+      },
+      "Clarity": {
+        "Readability": 0.829,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.851,
+        "Pronoun_Clarity": 0.878,
+        "score": 0.865
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the conversation, summary, and judgment, with high accuracy, relevance, and completeness. The NLI entailment score suggests that the conversation logically necessitates the judgment, and the clarity scores indicate that the text is well-structured and easy to understand."
+    }
+  },
+  {
+    "id": 22,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.789,
+        "Dr": 0.856,
+        "score": 0.882
+      },
+      "Clarity": {
+        "Readability": 0.876,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.923,
+        "Pronoun_Clarity": 0.895,
+        "score": 0.899
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion on mountain running."
+    }
+  },
+  {
+    "id": 23,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.846,
+        "Dr": 0.921,
+        "score": 0.885
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.892,
+        "Disambiguation": 0.856,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.867
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The high scores indicate a strong semantic mapping between the conversation, summary, and judgment, with the model effectively capturing the core intents, entities, and discourse units. The entailment score suggests a logical connection between the conversation and judgment."
+    }
+  },
+  {
+    "id": 24,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.714,
+      "C_path": 0.786,
+      "Accuracy": 0.933,
+      "Relevance": 0.821,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.875,
+        "Dr": 0.75,
+        "score": 0.833
+      },
+      "Clarity": {
+        "Readability": 0.875,
+        "Syntactic_Simplicity": 0.875,
+        "Disambiguation": 0.875,
+        "Pronoun_Clarity": 0.875,
+        "score": 0.875
+      },
+      "J_score": 0.857,
+      "JCJS": 0.857,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about hobbies and games."
+    }
+  },
+  {
+    "id": 25,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.923,
+        "score": 0.893
+      },
+      "Clarity": {
+        "Readability": 0.876,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.935,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.906
+      },
+      "J_score": 0.893,
+      "JCJS": 0.901,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the Conversation, Summary, and Judgment, capturing the core intents and entities while maintaining thematic overlap and logical entailment."
+    }
+  },
+  {
+    "id": 26,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.789,
+        "score": 0.881
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.923,
+        "Disambiguation": 0.856,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.879
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, despite minor discrepancies in wording and detail."
+    }
+  },
+  {
+    "id": 27,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.921,
+        "Dr": 0.854,
+        "score": 0.888
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.877
+      },
+      "J_score": 0.893,
+      "JCJS": 0.881,
+      "Reasoning_Summary": "The high scores indicate a strong semantic mapping between the conversation, summary, and judgment, with the model effectively capturing the core intents, entities, and discourse units. The optimistic logic used for NLI entailment also suggests a logical connection between the conversation and judgment."
+    }
+  },
+  {
+    "id": 28,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.876,
+        "score": 0.889
+      },
+      "Clarity": {
+        "Readability": 0.854,
+        "Syntactic_Simplicity": 0.829,
+        "Disambiguation": 0.819,
+        "Pronoun_Clarity": 0.808,
+        "score": 0.828
+      },
+      "J_score": 0.901,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about balancing responsibilities and enjoyment in the final year of high school."
+    }
+  },
+  {
+    "id": 29,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.956,
+        "Dr": 0.889,
+        "score": 0.922
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.945,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.909
+      },
+      "J_score": 0.893,
+      "JCJS": 0.899,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical flow of ideas."
+    }
+  },
+  {
+    "id": 30,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.895,
+        "Er": 0.943,
+        "Dr": 0.879,
+        "score": 0.906
+      },
+      "Clarity": {
+        "Readability": 0.935,
+        "Syntactic_Simplicity": 0.951,
+        "Disambiguation": 0.928,
+        "Pronoun_Clarity": 0.942,
+        "score": 0.939
+      },
+      "J_score": 0.911,
+      "JCJS": 0.923,
+      "Reasoning_Summary": "The high scores reflect the strong semantic alignment between the Conversation, Summary, and Judgment, with the model effectively capturing the core intents, entities, and discourse flow, despite minor differences in vocabulary and syntax."
+    }
+  },
+  {
+    "id": 31,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.912,
+      "Accuracy": 0.967,
+      "Relevance": 0.935,
+      "Completeness": {
+        "Sr": 0.95,
+        "Er": 0.92,
+        "Dr": 0.91,
+        "score": 0.926
+      },
+      "Clarity": {
+        "Readability": 0.88,
+        "Syntactic_Simplicity": 0.85,
+        "Disambiguation": 0.92,
+        "Pronoun_Clarity": 0.89,
+        "score": 0.885
+      },
+      "J_score": 0.911,
+      "JCJS": 0.918,
+      "Reasoning_Summary": "The high JCJS score indicates strong semantic coherence between the conversation, summary, and judgment, with effective capture of core intents, entities, and discourse flow, despite minor differences in vocabulary and syntax."
+    }
+  },
+  {
+    "id": 32,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.923,
+        "score": 0.893
+      },
+      "Clarity": {
+        "Readability": 0.876,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.912,
+        "Pronoun_Clarity": 0.895,
+        "score": 0.896
+      },
+      "J_score": 0.911,
+      "JCJS": 0.903,
+      "Reasoning_Summary": "The high scores indicate strong semantic mapping between the conversation, summary, and judgment, with the model effectively capturing the core intents, entities, and discourse units. The entailment score suggests a logical connection between the conversation and judgment, supporting the decision to seek emergency care."
+    }
+  },
+  {
+    "id": 33,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.913,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.75,
+        "Dr": 0.938,
+        "score": 0.854
+      },
+      "Clarity": {
+        "Readability": 0.829,
+        "Syntactic_Simplicity": 0.912,
+        "Disambiguation": 0.935,
+        "Pronoun_Clarity": 0.891,
+        "score": 0.867
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The Conversation, Summary, and Judgment demonstrate high semantic coherence, with the Summary accurately capturing the core intents and entities from the Conversation. The Judgment logically follows from the Conversation, indicating a strong entailment relationship. However, minor discrepancies in entity recall and discourse unit flow prevent perfect scores."
+    }
+  },
+  {
+    "id": 34,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.912,
+      "Accuracy": 0.985,
+      "Relevance": 0.938,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.956,
+        "Dr": 0.911,
+        "score": 0.929
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.935,
+        "Disambiguation": 0.943,
+        "Pronoun_Clarity": 0.917,
+        "score": 0.924
+      },
+      "J_score": 0.941,
+      "JCJS": 0.933,
+      "Reasoning_Summary": "The high scores reflect the strong semantic mapping between the conversation, summary, and judgment, capturing core intents, entities, and discourse flow, with logical entailment and high clarity."
+    }
+  },
+  {
+    "id": 35,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.935,
+        "score": 0.908
+      },
+      "Clarity": {
+        "Readability": 0.869,
+        "Syntactic_Simplicity": 0.893,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.885
+      },
+      "J_score": 0.911,
+      "JCJS": 0.899,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical flow of tasks and commitments."
+    }
+  },
+  {
+    "id": 36,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.854,
+        "Dr": 0.912,
+        "score": 0.896
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.893,
+        "Disambiguation": 0.856,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.867
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent narrative with well-aligned themes and entities."
+    }
+  },
+  {
+    "id": 37,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.873,
+      "Completeness": {
+        "Sr": 0.912,
+        "Er": 0.821,
+        "Dr": 0.901,
+        "score": 0.878
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.819,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.853
+      },
+      "J_score": 0.889,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the conversation, summary, and judgment, with high accuracy, relevance, and completeness. The NLI entailment score suggests that the conversation logically necessitates the judgment, and the clarity scores indicate that the text is readable and well-structured."
+    }
+  },
+  {
+    "id": 38,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.789,
+        "Dr": 0.856,
+        "score": 0.882
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.856,
+        "Pronoun_Clarity": 0.923,
+        "score": 0.875
+      },
+      "J_score": 0.893,
+      "JCJS": 0.881,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the Conversation, Summary, and Judgment, with high accuracy, relevance, and completeness. The NLI entailment score suggests that the Conversation logically necessitates the Judgment, and the Clarity scores indicate that the text is generally clear and readable."
+    }
+  },
+  {
+    "id": 39,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.876,
+        "score": 0.889
+      },
+      "Clarity": {
+        "Readability": 0.854,
+        "Syntactic_Simplicity": 0.819,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.863
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The high scores reflect the strong semantic mapping between the conversation, summary, and judgment, capturing key events and entities from the hockey game, such as the teams involved, notable players, and the significance of the match."
+    }
+  },
+  {
+    "id": 40,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.819,
+        "score": 0.858
+      },
+      "Clarity": {
+        "Readability": 0.821,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.879,
+        "Pronoun_Clarity": 0.893,
+        "score": 0.873
+      },
+      "J_score": 0.881,
+      "JCJS": 0.869,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the conversation, summary, and judgment, with high accuracy, relevance, and completeness. The entailment score suggests a logical connection between the conversation and judgment."
+    }
+  },
+  {
+    "id": 41,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.812,
+        "Dr": 0.923,
+        "score": 0.87
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.789,
+        "score": 0.841
+      },
+      "J_score": 0.883,
+      "JCJS": 0.859,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the conversation, summary, and judgment, with high accuracy, relevance, and completeness. The entailment score suggests that the conversation logically necessitates the judgment, and the clarity score indicates that the text is well-structured and easy to understand."
+    }
+  },
+  {
+    "id": 42,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.854,
+        "score": 0.881
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.876,
+        "Disambiguation": 0.912,
+        "Pronoun_Clarity": 0.895,
+        "score": 0.896
+      },
+      "J_score": 0.911,
+      "JCJS": 0.903,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, capturing the lighthearted and playful tone of the exchange."
+    }
+  },
+  {
+    "id": 43,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.854,
+        "score": 0.881
+      },
+      "Clarity": {
+        "Readability": 0.869,
+        "Syntactic_Simplicity": 0.832,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.879,
+        "score": 0.87
+      },
+      "J_score": 0.893,
+      "JCJS": 0.889,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the Conversation, Summary, and Judgment, indicating a coherent and relevant evaluation."
+    }
+  },
+  {
+    "id": 44,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.856,
+        "score": 0.841
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.877
+      },
+      "J_score": 0.869,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the Conversation, Summary, and Judgment, with high accuracy, relevance, and completeness. The NLI entailment score suggests that the Conversation logically necessitates the Judgment, and the Clarity scores indicate that the text is readable and clear."
+    }
+  },
+  {
+    "id": 45,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.714,
+      "C_path": 0.786,
+      "Accuracy": 0.933,
+      "Relevance": 0.893,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.875,
+        "Dr": 0.75,
+        "score": 0.833
+      },
+      "Clarity": {
+        "Readability": 0.875,
+        "Syntactic_Simplicity": 0.875,
+        "Disambiguation": 0.875,
+        "Pronoun_Clarity": 0.875,
+        "score": 0.875
+      },
+      "J_score": 0.846,
+      "JCJS": 0.854,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key points such as the 'Unbreakable World Tour' and 'Janet Jackson Unbreakable Diamonds Collection' being accurately captured. The judgment is logically entailed by the conversation, and the completeness and clarity scores reflect the effective conveyance of core intents and entities."
+    }
+  },
+  {
+    "id": 46,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.714,
+      "C_path": 0.829,
+      "Accuracy": 0.938,
+      "Relevance": 0.875,
+      "Completeness": {
+        "Sr": 0.917,
+        "Er": 0.833,
+        "Dr": 0.75,
+        "score": 0.833
+      },
+      "Clarity": {
+        "Readability": 0.875,
+        "Syntactic_Simplicity": 0.875,
+        "Disambiguation": 0.875,
+        "Pronoun_Clarity": 0.875,
+        "score": 0.875
+      },
+      "J_score": 0.857,
+      "JCJS": 0.857,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion."
+    }
+  },
+  {
+    "id": 47,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.714,
+      "C_path": 0.786,
+      "Accuracy": 0.971,
+      "Relevance": 0.935,
+      "Completeness": {
+        "Sr": 0.923,
+        "Er": 0.912,
+        "Dr": 0.821,
+        "score": 0.885
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.951,
+        "Disambiguation": 0.932,
+        "Pronoun_Clarity": 0.911,
+        "score": 0.924
+      },
+      "J_score": 0.863,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, despite minor differences in wording and vocabulary."
+    }
+  },
+  {
+    "id": 48,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.869,
+        "Er": 0.823,
+        "Dr": 0.756,
+        "score": 0.816
+      },
+      "Clarity": {
+        "Readability": 0.903,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.819,
+        "Pronoun_Clarity": 0.792,
+        "score": 0.842
+      },
+      "J_score": 0.879,
+      "JCJS": 0.863,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key points like celebrity attendance and skepticism towards Tom Cruise's behavior being accurately captured. The judgment is also logically entailed by the conversation, given the discussion about the challenges of celebrity life."
+    }
+  },
+  {
+    "id": 49,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.856,
+        "score": 0.841
+      },
+      "Clarity": {
+        "Readability": 0.869,
+        "Syntactic_Simplicity": 0.895,
+        "Disambiguation": 0.823,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.872
+      },
+      "J_score": 0.893,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about bank-related tasks and financial responsibilities."
+    }
+  },
+  {
+    "id": 50,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.923,
+        "score": 0.893
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.856,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.863
+      },
+      "J_score": 0.876,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical relationship between the texts."
+    }
+  },
+  {
+    "id": 51,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.935,
+        "Er": 0.812,
+        "Dr": 0.869,
+        "score": 0.872
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.756,
+        "Disambiguation": 0.893,
+        "Pronoun_Clarity": 0.821,
+        "score": 0.822
+      },
+      "J_score": 0.853,
+      "JCJS": 0.887,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant evaluation of cultural adjustments, youth culture differences, and media influence."
+    }
+  },
+  {
+    "id": 52,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.867,
+        "score": 0.845
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.756,
+        "Disambiguation": 0.823,
+        "Pronoun_Clarity": 0.789,
+        "score": 0.797
+      },
+      "J_score": 0.883,
+      "JCJS": 0.864,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical flow of ideas."
+    }
+  },
+  {
+    "id": 53,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.854,
+        "Dr": 0.921,
+        "score": 0.888
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.893,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.872
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant evaluation."
+    }
+  },
+  {
+    "id": 54,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.872,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.812,
+        "Dr": 0.756,
+        "score": 0.856
+      },
+      "Clarity": {
+        "Readability": 0.935,
+        "Syntactic_Simplicity": 0.921,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.917
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the Conversation, Summary, and Judgment, with high accuracy and relevance. The completeness score suggests that core intents and critical entities are well-captured. The NLI entailment score implies a logical connection between the Conversation and Judgment."
+    }
+  },
+  {
+    "id": 55,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.935,
+      "Completeness": {
+        "Sr": 0.912,
+        "Er": 0.958,
+        "Dr": 0.882,
+        "score": 0.917
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.854,
+        "Pronoun_Clarity": 0.923,
+        "score": 0.879
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with accurate factual alignment and thematic overlap. The completeness score is also high, indicating that core intents and critical entities are well-captured."
+    }
+  },
+  {
+    "id": 56,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.846,
+        "Er": 0.923,
+        "Dr": 0.891,
+        "score": 0.887
+      },
+      "Clarity": {
+        "Readability": 0.876,
+        "Syntactic_Simplicity": 0.895,
+        "Disambiguation": 0.912,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.896
+      },
+      "J_score": 0.901,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation and summary, with key points such as the flight duration, Person2's travel habits, and Person1's fear of flying being accurately captured. The judgment is also logically entailed by the conversation, as it is a common-sense implication that Person1 would wish Person2 a good flight."
+    }
+  },
+  {
+    "id": 57,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.956,
+        "Dr": 0.878,
+        "score": 0.918
+      },
+      "Clarity": {
+        "Readability": 0.842,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.883
+      },
+      "J_score": 0.899,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the conversation, summary, and judgment, with high accuracy, relevance, and completeness. The entailment score suggests a logical connection between the conversation and judgment, while the clarity score reflects the text's readability and simplicity."
+    }
+  },
+  {
+    "id": 58,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.912,
+        "score": 0.901
+      },
+      "Clarity": {
+        "Readability": 0.876,
+        "Syntactic_Simplicity": 0.895,
+        "Disambiguation": 0.911,
+        "Pronoun_Clarity": 0.899,
+        "score": 0.895
+      },
+      "J_score": 0.911,
+      "JCJS": 0.918,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical relationship among them."
+    }
+  },
+  {
+    "id": 59,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.812,
+        "Dr": 0.921,
+        "score": 0.869
+      },
+      "Clarity": {
+        "Readability": 0.789,
+        "Syntactic_Simplicity": 0.856,
+        "Disambiguation": 0.923,
+        "Pronoun_Clarity": 0.812,
+        "score": 0.845
+      },
+      "J_score": 0.887,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about Clive's athletic abilities and personal life."
+    }
+  },
+  {
+    "id": 60,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.876,
+        "Dr": 0.945,
+        "score": 0.907
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.923,
+        "score": 0.879
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, with accurate capture of core intents, entities, and discourse flow."
+    }
+  },
+  {
+    "id": 61,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.879,
+        "score": 0.878
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.893,
+        "Disambiguation": 0.856,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.867
+      },
+      "J_score": 0.883,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent narrative with well-captured core intents and entities."
+    }
+  },
+  {
+    "id": 62,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.967,
+      "Relevance": 0.935,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.956,
+        "Dr": 0.889,
+        "score": 0.922
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.943,
+        "Disambiguation": 0.911,
+        "Pronoun_Clarity": 0.928,
+        "score": 0.921
+      },
+      "J_score": 0.911,
+      "JCJS": 0.924,
+      "Reasoning_Summary": "The high scores reflect the strong semantic mapping between the conversation, summary, and judgment, capturing core intents, entities, and discourse units, with logical entailment and clarity."
+    }
+  },
+  {
+    "id": 63,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.895,
+        "Er": 0.935,
+        "Dr": 0.881,
+        "score": 0.904
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.859,
+        "Disambiguation": 0.873,
+        "Pronoun_Clarity": 0.851,
+        "score": 0.855
+      },
+      "J_score": 0.911,
+      "JCJS": 0.899,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical relationship."
+    }
+  },
+  {
+    "id": 64,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.876,
+        "Dr": 0.901,
+        "score": 0.899
+      },
+      "Clarity": {
+        "Readability": 0.854,
+        "Syntactic_Simplicity": 0.819,
+        "Disambiguation": 0.892,
+        "Pronoun_Clarity": 0.911,
+        "score": 0.869
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical relationship among them."
+    }
+  },
+  {
+    "id": 65,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.753,
+      "Accuracy": 0.967,
+      "Relevance": 0.895,
+      "Completeness": {
+        "Sr": 0.912,
+        "Er": 0.821,
+        "Dr": 0.756,
+        "score": 0.863
+      },
+      "Clarity": {
+        "Readability": 0.935,
+        "Syntactic_Simplicity": 0.892,
+        "Disambiguation": 0.859,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.891
+      },
+      "J_score": 0.854,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about waiting for the bus and the weather."
+    }
+  },
+  {
+    "id": 66,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.789,
+        "Dr": 0.856,
+        "score": 0.882
+      },
+      "Clarity": {
+        "Readability": 0.869,
+        "Syntactic_Simplicity": 0.823,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.856,
+        "score": 0.862
+      },
+      "J_score": 0.893,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the Conversation, Summary, and Judgment, with high scores in Accuracy, Relevance, and Completeness. The NLI entailment score suggests that the Conversation logically necessitates the Judgment. The Clarity scores are also high, indicating that the text is readable, syntactically simple, and well-disambiguated."
+    }
+  },
+  {
+    "id": 67,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.812,
+        "Dr": 0.923,
+        "score": 0.879
+      },
+      "Clarity": {
+        "Readability": 0.854,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.935,
+        "Pronoun_Clarity": 0.923,
+        "score": 0.903
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The Conversation, Summary, and Judgment demonstrate strong semantic coherence, with the Judgment logically entailed by the Conversation. The discussion about Person 2's mother losing her job and the broader context of unemployment rates aligns with the Judgment's empathetic and solution-focused tone."
+    }
+  },
+  {
+    "id": 68,
+    "metrics": {
+      "EmbedSim": 0.923,
+      "NLI_entail": 0.967,
+      "C_path": 0.956,
+      "Accuracy": 0.992,
+      "Relevance": 0.981,
+      "Completeness": {
+        "Sr": 0.945,
+        "Er": 0.973,
+        "Dr": 0.958,
+        "score": 0.959
+      },
+      "Clarity": {
+        "Readability": 0.887,
+        "Syntactic_Simplicity": 0.921,
+        "Disambiguation": 0.935,
+        "Pronoun_Clarity": 0.943,
+        "score": 0.917
+      },
+      "J_score": 0.963,
+      "JCJS": 0.958,
+      "Reasoning_Summary": "The high scores reflect the strong semantic mapping between the conversation, summary, and judgment, capturing core intents, entities, and discourse flow, with minor deductions for minor syntactic variations and potential ambiguity in pronoun references."
+    }
+  },
+  {
+    "id": 69,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.911,
+        "score": 0.859
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.862
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical discussion about naming a baby, with a clear progression from issue to resolution."
+    }
+  },
+  {
+    "id": 70,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.714,
+      "C_path": 0.786,
+      "Accuracy": 0.933,
+      "Relevance": 0.893,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.875,
+        "Dr": 0.75,
+        "score": 0.833
+      },
+      "Clarity": {
+        "Readability": 0.875,
+        "Syntactic_Simplicity": 0.875,
+        "Disambiguation": 0.875,
+        "Pronoun_Clarity": 0.875,
+        "score": 0.875
+      },
+      "J_score": 0.846,
+      "JCJS": 0.854,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key points such as career growth and salary expectations accurately captured. However, the lack of explicit next steps in the conversation slightly reduces the entailment score."
+    }
+  },
+  {
+    "id": 71,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.889,
+        "Dr": 0.854,
+        "score": 0.888
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.876,
+        "Disambiguation": 0.895,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.896
+      },
+      "J_score": 0.899,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the Conversation, Summary, and Judgment, with high accuracy, relevance, and completeness. The NLI entailment score suggests that the Conversation logically necessitates the Judgment, and the EmbedSim score shows a strong similarity between the semantic embeddings of the texts."
+    }
+  },
+  {
+    "id": 72,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.846,
+        "Er": 0.923,
+        "Dr": 0.765,
+        "score": 0.878
+      },
+      "Clarity": {
+        "Readability": 0.821,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.854,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.872
+      },
+      "J_score": 0.893,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about Jane's experience in the UK."
+    }
+  },
+  {
+    "id": 73,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.956,
+        "Dr": 0.889,
+        "score": 0.922
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.876,
+        "Disambiguation": 0.945,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.909
+      },
+      "J_score": 0.893,
+      "JCJS": 0.899,
+      "Reasoning_Summary": "The high scores reflect the strong semantic mapping between the conversation, summary, and judgment, with a focus on the importance of concise note-taking and the professor's guidance."
+    }
+  },
+  {
+    "id": 74,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.714,
+      "C_path": 0.786,
+      "Accuracy": 0.933,
+      "Relevance": 0.821,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.625,
+        "Dr": 0.75,
+        "score": 0.75
+      },
+      "Clarity": {
+        "Readability": 0.875,
+        "Syntactic_Simplicity": 0.812,
+        "Disambiguation": 0.938,
+        "Pronoun_Clarity": 0.875,
+        "score": 0.875
+      },
+      "J_score": 0.829,
+      "JCJS": 0.843,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the conversation, summary, and judgment, with high accuracy and relevance. The completeness score suggests that core intents and entities are well-captured, but there is room for improvement in entity recall and discourse unit flow."
+    }
+  },
+  {
+    "id": 75,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.879,
+        "Dr": 0.846,
+        "score": 0.882
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.935,
+        "Disambiguation": 0.912,
+        "Pronoun_Clarity": 0.889,
+        "score": 0.909
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the Conversation, Summary, and Judgment, indicating a coherent and relevant discussion about attending a show at a theatre."
+    }
+  },
+  {
+    "id": 76,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.978,
+        "Dr": 0.895,
+        "score": 0.925
+      },
+      "Clarity": {
+        "Readability": 0.882,
+        "Syntactic_Simplicity": 0.911,
+        "Disambiguation": 0.899,
+        "Pronoun_Clarity": 0.921,
+        "score": 0.903
+      },
+      "J_score": 0.911,
+      "JCJS": 0.923,
+      "Reasoning_Summary": "The high JCJS score indicates that the conversation, summary, and judgment are well-aligned semantically, with the conversation logically necessitating the judgment. The completeness and clarity scores also suggest that the core intents and entities are captured, and the text is clear and readable."
+    }
+  },
+  {
+    "id": 77,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.912,
+        "score": 0.901
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.869,
+        "Pronoun_Clarity": 0.823,
+        "score": 0.846
+      },
+      "J_score": 0.893,
+      "JCJS": 0.881,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical relationship among the texts."
+    }
+  },
+  {
+    "id": 78,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.854,
+        "Dr": 0.901,
+        "score": 0.881
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.863,
+        "Disambiguation": 0.878,
+        "Pronoun_Clarity": 0.819,
+        "score": 0.85
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about traveling to Cambridge."
+    }
+  },
+  {
+    "id": 79,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.923,
+        "score": 0.904
+      },
+      "Clarity": {
+        "Readability": 0.869,
+        "Syntactic_Simplicity": 0.856,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.892,
+        "score": 0.879
+      },
+      "J_score": 0.893,
+      "JCJS": 0.887,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical relationship."
+    }
+  },
+  {
+    "id": 80,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.714,
+      "C_path": 0.786,
+      "Accuracy": 0.933,
+      "Relevance": 0.821,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.625,
+        "Dr": 0.75,
+        "score": 0.75
+      },
+      "Clarity": {
+        "Readability": 0.812,
+        "Syntactic_Simplicity": 0.859,
+        "Disambiguation": 0.781,
+        "Pronoun_Clarity": 0.875,
+        "score": 0.832
+      },
+      "J_score": 0.826,
+      "JCJS": 0.843,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key concepts like trendspotting, youth culture, and marketing being accurately captured. However, the lack of explicit judgment in the provided text results in a moderate NLI entailment score."
+    }
+  },
+  {
+    "id": 81,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.854,
+        "score": 0.881
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.859,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.864
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant relationship among them."
+    }
+  },
+  {
+    "id": 82,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.714,
+      "C_path": 0.786,
+      "Accuracy": 0.933,
+      "Relevance": 0.893,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.875,
+        "Dr": 0.75,
+        "score": 0.833
+      },
+      "Clarity": {
+        "Readability": 0.875,
+        "Syntactic_Simplicity": 0.875,
+        "Disambiguation": 0.875,
+        "Pronoun_Clarity": 0.875,
+        "score": 0.875
+      },
+      "J_score": 0.846,
+      "JCJS": 0.854,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the Conversation, Summary, and Judgment, despite some differences in vocabulary and syntax. The model effectively captured the core intents and entities, and the discourse unit is well-preserved."
+    }
+  },
+  {
+    "id": 83,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.879,
+        "score": 0.878
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.863,
+        "Disambiguation": 0.851,
+        "Pronoun_Clarity": 0.829,
+        "score": 0.845
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical relationship among them."
+    }
+  },
+  {
+    "id": 84,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.956,
+        "Dr": 0.879,
+        "score": 0.918
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.943,
+        "Disambiguation": 0.911,
+        "Pronoun_Clarity": 0.927,
+        "score": 0.92
+      },
+      "J_score": 0.893,
+      "JCJS": 0.899,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about the tie and fatherhood."
+    }
+  },
+  {
+    "id": 85,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.854,
+        "Dr": 0.921,
+        "score": 0.888
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.893,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.872
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical relationship among them."
+    }
+  },
+  {
+    "id": 86,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.895,
+        "Er": 0.935,
+        "Dr": 0.889,
+        "score": 0.906
+      },
+      "Clarity": {
+        "Readability": 0.843,
+        "Syntactic_Simplicity": 0.911,
+        "Disambiguation": 0.878,
+        "Pronoun_Clarity": 0.895,
+        "score": 0.882
+      },
+      "J_score": 0.893,
+      "JCJS": 0.901,
+      "Reasoning_Summary": "The high JCJS score indicates strong semantic coherence between the conversation, summary, and judgment, with effective capture of core intents and entities, despite minor differences in vocabulary and syntax."
+    }
+  },
+  {
+    "id": 87,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.923,
+        "score": 0.893
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.854,
+        "Pronoun_Clarity": 0.892,
+        "score": 0.866
+      },
+      "J_score": 0.883,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the Conversation, Summary, and Judgment, indicating a coherent and accurate relationship between the texts."
+    }
+  },
+  {
+    "id": 88,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.935,
+        "Er": 0.889,
+        "Dr": 0.921,
+        "score": 0.915
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.873,
+        "score": 0.867
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The high scores reflect the strong semantic mapping between the conversation, summary, and judgment, capturing the core intents, entities, and discourse flow, with logical entailment and good clarity."
+    }
+  },
+  {
+    "id": 89,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.876,
+        "Dr": 0.945,
+        "score": 0.907
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.851,
+        "Disambiguation": 0.923,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.872
+      },
+      "J_score": 0.893,
+      "JCJS": 0.881,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic mapping between the Conversation, Summary, and Judgment, with high accuracy, relevance, and completeness. The NLI entailment score suggests a logical connection between the Conversation and Judgment, while the EmbedSim score reflects a good semantic similarity between the texts."
+    }
+  },
+  {
+    "id": 90,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.912,
+      "Accuracy": 0.973,
+      "Relevance": 0.935,
+      "Completeness": {
+        "Sr": 0.938,
+        "Er": 0.958,
+        "Dr": 0.921,
+        "score": 0.939
+      },
+      "Clarity": {
+        "Readability": 0.881,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.911,
+        "Pronoun_Clarity": 0.889,
+        "score": 0.896
+      },
+      "J_score": 0.943,
+      "JCJS": 0.926,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and accurate representation of the situation."
+    }
+  },
+  {
+    "id": 91,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.876,
+        "Dr": 0.854,
+        "score": 0.877
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.859,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.864
+      },
+      "J_score": 0.893,
+      "JCJS": 0.881,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and accurate representation of the customer's request for a round-trip ticket from Montreal to Toronto."
+    }
+  },
+  {
+    "id": 92,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.879,
+        "score": 0.878
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.892,
+        "Disambiguation": 0.856,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.867
+      },
+      "J_score": 0.851,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant relationship among them."
+    }
+  },
+  {
+    "id": 93,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.879,
+        "score": 0.878
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.893,
+        "Disambiguation": 0.856,
+        "Pronoun_Clarity": 0.901,
+        "score": 0.867
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The Conversation, Summary, and Judgment demonstrate strong semantic alignment, with the Judgment logically entailed by the Conversation. The scores reflect high accuracy, relevance, and completeness, indicating effective communication of cultural practices and norms."
+    }
+  },
+  {
+    "id": 94,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.875,
+        "Dr": 0.911,
+        "score": 0.892
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.878,
+        "score": 0.863
+      },
+      "J_score": 0.876,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to the strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical flow of information."
+    }
+  },
+  {
+    "id": 95,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.872,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.812,
+        "Dr": 0.854,
+        "score": 0.856
+      },
+      "Clarity": {
+        "Readability": 0.789,
+        "Syntactic_Simplicity": 0.823,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.854,
+        "score": 0.842
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and judgment, with the summary effectively capturing key points and themes, despite minor differences in wording and focus."
+    }
+  },
+  {
+    "id": 96,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.935,
+        "Er": 0.891,
+        "Dr": 0.876,
+        "score": 0.901
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.819,
+        "Pronoun_Clarity": 0.793,
+        "score": 0.826
+      },
+      "J_score": 0.893,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The high scores reflect the strong semantic mapping between the conversation, summary, and judgment, with key points such as the student visa application, required documents, and the one-year visa issuance with renewal options being accurately captured and logically entailed."
+    }
+  },
+  {
+    "id": 97,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.854,
+        "Dr": 0.887,
+        "score": 0.881
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.793,
+        "Disambiguation": 0.851,
+        "Pronoun_Clarity": 0.869,
+        "score": 0.838
+      },
+      "J_score": 0.893,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about Daniel's mental health concerns and the need for professional help."
+    }
+  },
+  {
+    "id": 98,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.854,
+        "Dr": 0.921,
+        "score": 0.888
+      },
+      "Clarity": {
+        "Readability": 0.876,
+        "Syntactic_Simplicity": 0.832,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.911,
+        "score": 0.88
+      },
+      "J_score": 0.899,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key intents like travel destinations and accommodations captured. The judgment is logically entailed by the conversation, and the completeness score reflects the presence of critical entities and discourse units."
+    }
+  },
+  {
+    "id": 99,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.911,
+        "score": 0.859
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.876,
+        "score": 0.862
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with the judgment logically entailed by the conversation context."
+    }
+  },
+  {
+    "id": 100,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.854,
+        "score": 0.881
+      },
+      "Clarity": {
+        "Readability": 0.876,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.923,
+        "Pronoun_Clarity": 0.895,
+        "score": 0.899
+      },
+      "J_score": 0.911,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, capturing core intents and entities. The judgment is logically entailed by the conversation, and the text exhibits good clarity and readability."
+    }
+  },
+  {
+    "id": 101,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.956,
+        "Dr": 0.879,
+        "score": 0.918
+      },
+      "Clarity": {
+        "Readability": 0.843,
+        "Syntactic_Simplicity": 0.912,
+        "Disambiguation": 0.895,
+        "Pronoun_Clarity": 0.821,
+        "score": 0.867
+      },
+      "J_score": 0.901,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and logical relationship."
+    }
+  },
+  {
+    "id": 102,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.846,
+        "Er": 0.769,
+        "Dr": 0.923,
+        "score": 0.846
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.923,
+        "Pronoun_Clarity": 0.846,
+        "score": 0.881
+      },
+      "J_score": 0.901,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with the judgment logically entailed by the conversation's content. The completeness and clarity scores also indicate a well-structured and easy-to-follow narrative."
+    }
+  },
+  {
+    "id": 103,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.872,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.812,
+        "Dr": 0.923,
+        "score": 0.879
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.869,
+        "score": 0.866
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about James' college concerns and Principal Skinner's reassuring response."
+    }
+  },
+  {
+    "id": 104,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.869,
+      "Accuracy": 0.956,
+      "Relevance": 0.938,
+      "Completeness": {
+        "Sr": 0.912,
+        "Er": 0.875,
+        "Dr": 0.901,
+        "score": 0.896
+      },
+      "Clarity": {
+        "Readability": 0.829,
+        "Syntactic_Simplicity": 0.851,
+        "Disambiguation": 0.878,
+        "Pronoun_Clarity": 0.842,
+        "score": 0.85
+      },
+      "J_score": 0.903,
+      "JCJS": 0.887,
+      "Reasoning_Summary": "The JCJS score indicates a strong semantic alignment between the Conversation, Summary, and Judgment, reflecting the effective communication of the benefits and purposes of premarital contracts."
+    }
+  },
+  {
+    "id": 105,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.812,
+        "Dr": 0.819,
+        "score": 0.869
+      },
+      "Clarity": {
+        "Readability": 0.739,
+        "Syntactic_Simplicity": 0.821,
+        "Disambiguation": 0.756,
+        "Pronoun_Clarity": 0.803,
+        "score": 0.78
+      },
+      "J_score": 0.883,
+      "JCJS": 0.854,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key themes of financial struggles and debt management being accurately captured. The judgment is logically entailed by the conversation, and critical entities such as financial challenges and spending habits are well-represented."
+    }
+  },
+  {
+    "id": 106,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.854,
+        "Dr": 0.819,
+        "score": 0.887
+      },
+      "Clarity": {
+        "Readability": 0.829,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.879
+      },
+      "J_score": 0.893,
+      "JCJS": 0.882,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key points such as Paul's early start in music and his ambition to be part of a pop group being accurately captured."
+    }
+  },
+  {
+    "id": 107,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.867,
+        "score": 0.845
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.756,
+        "Disambiguation": 0.823,
+        "Pronoun_Clarity": 0.789,
+        "score": 0.797
+      },
+      "J_score": 0.863,
+      "JCJS": 0.854,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about a trip to Paris, with a good balance of sightseeing and relaxation."
+    }
+  },
+  {
+    "id": 108,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.901,
+      "Completeness": {
+        "Sr": 0.889,
+        "Er": 0.778,
+        "Dr": 0.911,
+        "score": 0.859
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.901,
+        "Pronoun_Clarity": 0.823,
+        "score": 0.849
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with the judgment being logically entailed by the conversation. The completeness and clarity scores are also high, indicating that the core intents and critical information are captured, and the text is clear and readable."
+    }
+  },
+  {
+    "id": 109,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.856,
+      "Accuracy": 0.935,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.878,
+        "Er": 0.765,
+        "Dr": 0.821,
+        "score": 0.821
+      },
+      "Clarity": {
+        "Readability": 0.789,
+        "Syntactic_Simplicity": 0.856,
+        "Disambiguation": 0.923,
+        "Pronoun_Clarity": 0.812,
+        "score": 0.845
+      },
+      "J_score": 0.869,
+      "JCJS": 0.883,
+      "Reasoning_Summary": "The Conversation and Summary align well in terms of semantic intent, with the Judgment logically following from the discussion. The scores reflect a strong thematic overlap and factual alignment, despite some differences in vocabulary and entity recall."
+    }
+  },
+  {
+    "id": 110,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.938,
+        "Dr": 0.846,
+        "score": 0.886
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.854,
+        "Pronoun_Clarity": 0.912,
+        "score": 0.871
+      },
+      "J_score": 0.893,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The high scores reflect the strong semantic alignment between the conversation, summary, and judgment, with key details such as the penthouse reservation, contact information, and follow-up call accurately captured and logically entailed."
+    }
+  },
+  {
+    "id": 111,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.889,
+        "Dr": 0.911,
+        "score": 0.9
+      },
+      "Clarity": {
+        "Readability": 0.851,
+        "Syntactic_Simplicity": 0.879,
+        "Disambiguation": 0.892,
+        "Pronoun_Clarity": 0.865,
+        "score": 0.872
+      },
+      "J_score": 0.883,
+      "JCJS": 0.893,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with the judgment logically entailed by the conversation's context, indicating a coherent and relevant evaluation."
+    }
+  },
+  {
+    "id": 112,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.921,
+      "Completeness": {
+        "Sr": 0.901,
+        "Er": 0.789,
+        "Dr": 0.856,
+        "score": 0.882
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.876,
+        "Pronoun_Clarity": 0.823,
+        "score": 0.859
+      },
+      "J_score": 0.893,
+      "JCJS": 0.881,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, despite some differences in vocabulary and sentence structure. The model effectively captured the core intents, entities, and discourse units, and recognized the logical entailment between the conversation and judgment."
+    }
+  },
+  {
+    "id": 113,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.785,
+      "Accuracy": 0.956,
+      "Relevance": 0.892,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.812,
+        "Dr": 0.819,
+        "score": 0.868
+      },
+      "Clarity": {
+        "Readability": 0.859,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.878,
+        "Pronoun_Clarity": 0.851,
+        "score": 0.872
+      },
+      "J_score": 0.893,
+      "JCJS": 0.879,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant discussion about the challenges of buying a house in the city."
+    }
+  },
+  {
+    "id": 114,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.973,
+      "Relevance": 0.935,
+      "Completeness": {
+        "Sr": 0.912,
+        "Er": 0.958,
+        "Dr": 0.887,
+        "score": 0.919
+      },
+      "Clarity": {
+        "Readability": 0.901,
+        "Syntactic_Simplicity": 0.943,
+        "Disambiguation": 0.911,
+        "Pronoun_Clarity": 0.956,
+        "score": 0.927
+      },
+      "J_score": 0.911,
+      "JCJS": 0.924,
+      "Reasoning_Summary": "The high scores reflect the strong semantic mapping between the conversation, summary, and judgment, with a focus on factual alignment, thematic overlap, and core intent capture."
+    }
+  },
+  {
+    "id": 115,
+    "metrics": {
+      "EmbedSim": 0.842,
+      "NLI_entail": 0.921,
+      "C_path": 0.856,
+      "Accuracy": 0.938,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.875,
+        "Er": 0.958,
+        "Dr": 0.912,
+        "score": 0.915
+      },
+      "Clarity": {
+        "Readability": 0.829,
+        "Syntactic_Simplicity": 0.901,
+        "Disambiguation": 0.935,
+        "Pronoun_Clarity": 0.892,
+        "score": 0.889
+      },
+      "J_score": 0.903,
+      "JCJS": 0.887,
+      "Reasoning_Summary": "The conversation and summary align well in terms of semantic intent, with the summary accurately capturing the lighthearted exchange about beauty and skincare. The judgment is entailed by the conversation, as the discussion about natural beauty and skincare remedies logically leads to the conclusion that the conversation is about the importance of natural skincare. The completeness score is high due to the presence of core intents, critical entities, and a clear discourse unit. The clarity score is also high, indicating that the text is readable, syntactically simple, and easy to disambiguate."
+    }
+  },
+  {
+    "id": 116,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.812,
+      "Accuracy": 0.935,
+      "Relevance": 0.891,
+      "Completeness": {
+        "Sr": 0.921,
+        "Er": 0.854,
+        "Dr": 0.901,
+        "score": 0.892
+      },
+      "Clarity": {
+        "Readability": 0.819,
+        "Syntactic_Simplicity": 0.876,
+        "Disambiguation": 0.832,
+        "Pronoun_Clarity": 0.911,
+        "score": 0.859
+      },
+      "J_score": 0.883,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation and summary, with key points like drink types and quantities accurately captured. The judgment logically follows from the conversation, indicating a well-structured and coherent discussion."
+    }
+  },
+  {
+    "id": 117,
+    "metrics": {
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01keedrkx4ez9s1e0305jaevak` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99482, Requested 648. Please try again in 1m52.32s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    }
+  },
+  {
+    "id": 118,
+    "metrics": {
+      "EmbedSim": 0.857,
+      "NLI_entail": 0.923,
+      "C_path": 0.821,
+      "Accuracy": 0.967,
+      "Relevance": 0.912,
+      "Completeness": {
+        "Sr": 0.935,
+        "Er": 0.891,
+        "Dr": 0.876,
+        "score": 0.901
+      },
+      "Clarity": {
+        "Readability": 0.839,
+        "Syntactic_Simplicity": 0.854,
+        "Disambiguation": 0.829,
+        "Pronoun_Clarity": 0.851,
+        "score": 0.843
+      },
+      "J_score": 0.893,
+      "JCJS": 0.876,
+      "Reasoning_Summary": "The JCJS score is high due to strong semantic mapping between the conversation, summary, and judgment, indicating a coherent and relevant relationship."
+    }
+  },
+ 

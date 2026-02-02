@@ -136,9 +136,9 @@ def evaluate_single(summary, conversation, judgment):
 
     # Relevance
     rel = relevance_module.compute(
-        conversation_text=conversation,
-        summary_text=summary,
-        judgment_text=judgment
+        conversation=conversation,
+        summary=summary,
+        judgment=judgment
     )
 
     # Clarity

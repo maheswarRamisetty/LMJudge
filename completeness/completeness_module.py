@@ -201,8 +201,7 @@ def test_summary_completeness():
         # print(f"Entity Recall: {result['entity_recall']:.3f}")
         # print(f"Discourse Recall: {result['discourse_recall']:.3f}")
     
-    return result
+    # return result
 
 if __name__ == "__main__":
-
     test_summary_completeness()

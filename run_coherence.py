@@ -8,7 +8,7 @@ from embedding_model import Embedder
 from cfg import ALPHA,ALPHA_N,ALPHA_S
 from nli_model import NLIModel
 from coherence import compute_embed_sim, compute_cpath
-from utils import to_pairs
+from jcjs_coherence.utils.utils import to_pairs
 from cfg import DEVICE
 from tqdm import tqdm
 from itertools import zip_longest

@@ -1,4 +1,3 @@
-
 import numpy as np
 def compute_nli_entailment(facts, conversation_chunks, nli_model):
     if not facts or not conversation_chunks:

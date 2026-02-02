@@ -11,5 +11,5 @@ class RelevanceParser:
         else:
             raise ValueError(f"Unsupported mode: {mode}")
 
-    def compute(self, conversation: str, judgment: str) -> float:
-        return self.module.compute_relevance(conversation, judgment)
+    def compute(self, conversation: str, summary: str, judgment: str) -> float:
+        return self.module.compute_relevance(conversation, summary, judgment)

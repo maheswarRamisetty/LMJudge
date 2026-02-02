@@ -15,4 +15,3 @@ def _l(name):
         logger.addHandler(handler)
 
     return logger
-

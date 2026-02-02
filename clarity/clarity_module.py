@@ -169,8 +169,8 @@ def main():
     from cfg import DATA_PATH
     from data_loader import load_csv
     summaries,convs,judgments = load_csv(DATA_PATH) 
-    
-    for idx,c in enumerate(summaries):
+    scores=[]
+    for idx,c in enumerate(judgments):
 
         print(f"DOING {idx+1} : ",end="\t")
 
@@ -185,7 +185,9 @@ def main():
         
       
         print(f"\nTotal: {result['clarity_score']:.4f}")
-        
+        scores.append(result['clarity_score'])
+
+    print("Avg Score : ",np.mean(scores))
     
 
 if __name__ == "__main__":

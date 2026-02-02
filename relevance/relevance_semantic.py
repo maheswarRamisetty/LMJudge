@@ -4,7 +4,7 @@ from typing import List
 from sentence_transformers import SentenceTransformer, util
 import torch
 from relevance.base_relevance import BaseRelevance
-from utils import cos_sim
+from utils.utils import cos_sim
 
 
 class SemanticRelevanceModule(BaseRelevance):

@@ -1,6 +1,6 @@
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from utils import cosine_sim
+from utils.utils import cosine_sim
 from tqdm import tqdm
 from cfg import EMBEDDING_MODEL
 class EmbeddingSimilarity:

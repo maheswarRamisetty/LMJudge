@@ -1,34 +1,40 @@
 import pandas as pd
-from conv_chunker import ConvChunker
 from tqdm import tqdm
+from conv_chunker import ConvChunker
 from embedding_similarity import EmbeddingSimilarity
+from cfg import DATA_PATH
+from data_loader import load_csv
 
-INPUT_CSV = "../data/Data-master/sft_informativeness_batch_1.csv"
 
 def main():
-    
-    df = pd.read_csv(INPUT_CSV)
-    chunker = ConvChunker(max_tokens=300,overlap_tokens=50)
-    embed_sims = EmbeddingSimilarity()
-    
-    a_s=[]
-    total_f_s =0.0
-    for idx,row in tqdm(df.iterrows(),total=len(df),desc="Calculating Embed Similarity"):
-        conv = str(row['call_conversation'])
-        summary = str(row['call_summary'])
-        
-        chunks = chunker._build_chunks(conv)
-        sims, f_s = embed_sims.summary_to_chunk_similarity(summary, chunks)
-        a_s.append({
-            'num_chunks':len(chunks),
-            "chunk_sims":sims,
-            "embed_s":f_s
-        })
-        total_f_s += f_s    
-    
-    return total_f_s/len(a_s)
+    summaries, conversations, judgments = load_csv(DATA_PATH)
 
-if __name__=="__main__":
+    chunker = ConvChunker(max_tokens=300, overlap_tokens=50)
+    embed_sims = EmbeddingSimilarity()
+
+    total_s = 0.0
+    count = 0
+
+    for summary, judgment in tqdm(
+        zip(summaries, judgments),
+        total=len(judgments),
+        desc="Jusdment-Summary Similarity"
+    ):
+        summary = str(summary)
+        judgment = str(judgment)
+
+        judgment_chunks = chunker._build_chunks(judgment)
+
+        _, f_s = embed_sims.summary_to_chunk_similarity(
+            summary,
+            judgment_chunks
+        )
+
+        total_s += f_s
+        count += 1
+
+    return total_s / count
+
+
+if __name__ == "__main__":
     print(main())
-        
-        

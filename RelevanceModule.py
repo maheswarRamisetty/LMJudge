@@ -76,10 +76,3 @@ if __name__=="__main__":
 	for idx,(c,j) in enumerate(zip(convs[:10],judgments[:10])):
 		ans = rV.compute_relevance(c,j)
 		print(ans)
-
-
-
-
-
-
-

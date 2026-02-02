@@ -108,7 +108,7 @@ class AccuracyCalculator:
             'feb': '02', 'february': '02',
             'mar': '03', 'march': '03',
             'apr': '04', 'april': '04',
-            'may': '05',
+            'may': '05', 
             'jun': '06', 'june': '06',
             'jul': '07', 'july': '07',
             'aug': '08', 'august': '08',
@@ -281,8 +281,8 @@ class AccuracyCalculator:
         if ref_embeddings.size(0) == 0 or cand_embeddings.size(0) == 0:
             return [], 0.0
 
-        from utils.utils import cosine_sim
-        cosine_scores = cosine_sim(ref_embeddings, cand_embeddings)
+        from utils.utils import cos_sim
+        cosine_scores = cos_sim(ref_embeddings, cand_embeddings)
     
         cand_matched = set()
         

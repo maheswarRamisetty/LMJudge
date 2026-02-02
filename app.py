@@ -45,7 +45,7 @@ if st.button("🚀 Evaluate"):
                 judgment=judgment
             )
 
-        st.success("Evaluation completed ✅")
+        st.success("Evaluation completed ")
 
         st.subheader("🧮 Scores")
         cols = st.columns(7)

@@ -70,12 +70,5 @@ def parse_json(json_str: str) -> str:
     # Give up safely
     return ""
 
-from data_loader import load_csv
-from cfg import DATA_PATH
 
-def ll(path):
-    df = load_csv(path)
-    print(df.columns)
 
-if __name__=="__main__":
-    ll(DATA_PATH)

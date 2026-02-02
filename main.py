@@ -1,4 +1,4 @@
-# evaluator.py
+import pandas as pd
 from cfg import DATA_PATH, ALPHA, ALPHA_N, ALPHA_S
 from data_loader import load_csv
 from conv_chunker import ConvChunker
@@ -11,6 +11,8 @@ from nli_entailment import compute_nli_entailment
 from relevance.relevance_parser import RelevanceParser
 from clarity.clarity_module import ClarityCalculator
 from tqdm import tqdm
+import numpy as np
+import os
 
 weights = {
     'wA': 0.25,
@@ -165,3 +167,22 @@ def evaluate_single(summary, conversation, judgment):
         "Clarity": round(clarity, 4),
         "JCJS": round(JCJS, 4)
     }
+
+
+def run_and_append(csv_path, output_csv):
+    results = run_evaluation(csv_path)
+    df = pd.DataFrame(results)
+
+    if os.path.exists(output_csv):
+        df.to_csv(output_csv, mode="a", header=False, index=False)
+    else:
+        df.to_csv(output_csv, index=False)
+
+    print(f"Appended {len(df)} rows to {output_csv}")
+
+
+if __name__=="__main__":
+    OUTPUT_CSV = "output.csv"
+    run_and_append(DATA_PATH,OUTPUT_CSV)
+    
+    

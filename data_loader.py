@@ -76,7 +76,7 @@ def load_csv(path):
             print(f"Row {idx} - JSON parsing error (salvaged empty)")
         judgments.append(reasoning)
 
-    return summaries, call_convs, judgments
+    return summaries[:200], call_convs[:200], judgments[:200]
 
     # for p in judgments:
     #     print("Judgment:", p)

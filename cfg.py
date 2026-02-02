@@ -10,3 +10,4 @@ TOKENIZER_NAME ="sentence-transformers/all-mpnet-base-v2"
 import torch
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 ALPHA = 0.5
+CALL_CONV_PATH = r"C:\Users\RMSTVNMFST\mahesh\judge\datasummaries.csv"

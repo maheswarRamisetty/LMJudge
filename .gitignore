@@ -1,2 +1,2 @@
-*.csv
+*.csv && !datasummaries.csv
 *.json

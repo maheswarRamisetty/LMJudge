@@ -1,10 +1,25 @@
 import re
 import numpy as np
+import torch
+import torch.nn.functional as F
 
 def cosine_sim(a, b):
     a = a / (np.linalg.norm(a) + 1e-12)
     b = b / (np.linalg.norm(b) + 1e-12)
     return float(np.dot(a, b))
+
+
+
+def cos_sim(a: torch.Tensor, b: torch.Tensor) -> torch.Tensor:
+    if a.dim() == 1:
+        a = a.unsqueeze(0)
+    if b.dim() == 1:
+        b = b.unsqueeze(0)
+
+    a = F.normalize(a, p=2, dim=1)
+    b = F.normalize(b, p=2, dim=1)
+
+    return torch.matmul(a, b.transpose(0, 1))
 
 def simple_normalize(text):
     if text is None:

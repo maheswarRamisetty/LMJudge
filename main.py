@@ -10,7 +10,7 @@ from AccuracyModule import AccuracyCalculator
 from nli_entailment import compute_nli_entailment
 from relevance.relevance_parser import RelevanceParser
 from clarity.clarity_module import ClarityCalculator
-from tqdm import tqdm
+import tqdm
 import numpy as np
 import os
 
@@ -67,9 +67,9 @@ def run_evaluation(csv_path):
 
         # Relevance
         rel = relevance_module.compute(
-            conversation_text=c,
-            summary_text=summary,
-            judgment_text=judgment
+            conversation=c,
+            summary=summary,
+            judgment=judgment
         )
 
         # Clarity

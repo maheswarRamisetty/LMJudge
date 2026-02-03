@@ -1,68 +1,66 @@
 import streamlit as st
 import pandas as pd
+import tempfile
 from main import evaluate_single
+from data_loader import load_csv
 
 st.set_page_config(
     page_title="JCJS Evaluation Dashboard",
     layout="wide"
 )
 
-st.title("📊 JCJS Manual Evaluation System")
-st.markdown("Evaluate **one summary at a time**")
+st.title("📊 JCJS Batch Evaluation System")
+st.markdown("Upload a **CSV / Excel file** to evaluate summaries")
 
-# Session state to store history
-if "history" not in st.session_state:
-    st.session_state.history = []
+if "results" not in st.session_state:
+    st.session_state.results = []
 
-st.subheader("✍️ Input Text")
-
-conversation = st.text_area(
-    "Conversation",
-    height=200,
-    placeholder="Paste full conversation here..."
+uploaded_file = st.file_uploader(
+    "📂 Upload CSV or Excel file",
+    type=["csv", "xlsx"]
 )
 
-summary = st.text_area(
-    "Summary",
-    height=150,
-    placeholder="Paste generated summary here..."
-)
+if uploaded_file:
+    with tempfile.NamedTemporaryFile(delete=False, suffix=uploaded_file.name) as tmp:
+        tmp.write(uploaded_file.read())
+        file_path = tmp.name
 
-judgment = st.text_area(
-    "Judgment / Reference",
-    height=150,
-    placeholder="Paste human judgment / gold summary here..."
-)
+    if uploaded_file.name.endswith(".xlsx"):
+        df = pd.read_excel(file_path)
+        csv_path = file_path.replace(".xlsx", ".csv")
+        df.to_csv(csv_path, index=False)
+        file_path = csv_path
 
-if st.button("🚀 Evaluate"):
-    if not conversation or not summary or not judgment:
-        st.warning("Please fill all fields.")
-    else:
-        with st.spinner("Computing scores..."):
-            scores = evaluate_single(
-                summary=summary,
-                conversation=conversation,
-                judgment=judgment
-            )
+    summaries, conversations, judgments = load_csv(file_path)
 
-        st.success("Evaluation completed ")
+    st.success(f"Loaded {len(summaries)} rows")
 
-        st.subheader("🧮 Scores")
-        cols = st.columns(7)
-        for col, (k, v) in zip(cols, scores.items()):
-            col.metric(k, v)
+    if st.button("🚀 Run Evaluation"):
+        with st.spinner("Evaluating summaries..."):
+            results = []
 
-        st.session_state.history.append(scores)
+            for i in range(len(summaries)):
+                scores = evaluate_single(
+                    summary=summaries[i],
+                    conversation=conversations[i],
+                    judgment=judgments[i]
+                )
+                scores["Row"] = i + 1
+                results.append(scores)
 
-if st.session_state.history:
-    st.subheader("📜 Evaluation History")
-    df = pd.DataFrame(st.session_state.history)
-    df.index += 1
-    st.dataframe(df, use_container_width=True)
+            st.session_state.results = results
+
+if st.session_state.results:
+    st.subheader("📈 Evaluation Results")
+
+    df_results = pd.DataFrame(st.session_state.results)
+    df_results.set_index("Row", inplace=True)
+
+    st.dataframe(df_results, use_container_width=True)
 
     st.download_button(
-        "⬇️ Download History",
-        df.to_csv(index_label="Example"),
-        file_name="jcjs_manual_results.csv",
+        "⬇️ Download Results",
+        df_results.to_csv(),
+        file_name="jcjs_batch_results.csv",
         mime="text/csv"
     )

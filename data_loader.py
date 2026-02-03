@@ -102,6 +102,6 @@ def load_csv(path):
 if __name__ == "__main__":
     from cfg import DATA_PATH
     summaries , call_convs,judgments = load_csv(DATA_PATH)
-    print(summaries[2:3])
-    print(call_convs[2:3])
-    print(judgments[2:3])
+    print(summaries[10])
+    print(call_convs[10])
+    print(judgments[10])

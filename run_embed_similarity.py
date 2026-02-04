@@ -12,6 +12,12 @@ def main():
     chunker = ConvChunker(max_tokens=300, overlap_tokens=50)
     embed_sims = EmbeddingSimilarity()
 
+
+    #[... ... ... ...] -> []-> 768
+    #[.... ....] -> 768
+
+
+    
     total_s = 0.0
     count = 0
 

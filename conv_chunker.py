@@ -22,6 +22,8 @@ class ConvChunker:
     def _token_length(self,text):
         return len(self.tokenizer.encode(text,add_special_tokens=False))
     
+  
+
     def _build_chunks(self,text):
         
         t=self._split_persons(text)

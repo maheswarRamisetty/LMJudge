@@ -1,8 +1,8 @@
 import pandas as pd
 import json
 import string
-from utils import simple_normalize
-from utils import parse_json
+from utils.utils import simple_normalize
+from utils.utils import parse_json
 
 POSSIBLE_SUMMARY_COLS = ['summary', 'context', 'conversation_summary', 'prompt_summary']
 POSSIBLE_JUDGMENT_COLS = ['reasoning', 'judgment', 'judgement', 'judge', 'decision', 'response_reasoning']
@@ -76,7 +76,7 @@ def load_csv(path):
             print(f"Row {idx} - JSON parsing error (salvaged empty)")
         judgments.append(reasoning)
 
-    return summaries, call_convs, judgments
+    return summaries[:200], call_convs[:200], judgments[:200]
 
     # for p in judgments:
     #     print("Judgment:", p)
@@ -101,4 +101,7 @@ def load_csv(path):
 
 if __name__ == "__main__":
     from cfg import DATA_PATH
-    print(load_csv(DATA_PATH))
+    summaries , call_convs,judgments = load_csv(DATA_PATH)
+    print(summaries[10])
+    print(call_convs[10])
+    print(judgments[10])

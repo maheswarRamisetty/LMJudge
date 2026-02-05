@@ -1,3 +1,4 @@
+
 import pandas as pd
 from conv_chunker import ConvChunker
 from summary_extract import SummaryExtractor
@@ -5,12 +6,13 @@ from nli import NLIModel
 from nli_entailment import compute_nli_entailment
 from tqdm import tqdm
 
-INPUT_CSV = "../data/Data-master/sft_informativeness_batch_1.csv"
+INPUT_CSV = "../data/Data-master/data.csv"
 OUTPUT_CSV = "nli_entailment_output.csv"
 
 
 def main():
-    df = pd.read_csv(INPUT_CSV)
+    from cfg import DATA_PATH
+    df = pd.read_csv(DATA_PATH)
 
     chunker = ConvChunker(max_tokens=300, overlap_tokens=50)
     fact_extractor = SummaryExtractor()

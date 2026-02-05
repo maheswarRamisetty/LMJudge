@@ -68,3 +68,10 @@ def parse_json(json_str: str) -> str:
 
     # Give up safely
     return ""
+
+import pandas as pd
+
+if __name__=="__main__":
+    df = pd.read_csv("../output.csv")
+    print(np.sum(df['JCJS'])/200)    
+

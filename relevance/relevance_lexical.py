@@ -8,15 +8,21 @@ class LexicalRelevanceModule(BaseRelevance):
     def __init__(self, model="en_core_web_sm"):
         self.nlp = spacy.load(model)
 
-    def compute_relevance(self, conversation: str, judgment: str) -> float:
-        context_elements = self._extract(conversation)
-        judgment_elements = self._extract(judgment)
+    def compute_relevance(
+        self, conversation: str, summary: str, judgment: str
+    ) -> float:
 
-        if not judgment_elements:
+        ctx = set(self._extract(conversation))
+        summ = set(self._extract(summary))
+        judg = set(self._extract(judgment))
+
+        if not judg:
             return 0.0
 
-        common = set(context_elements).intersection(set(judgment_elements))
-        return len(common) / len(judgment_elements)
+        r_ctx = len(judg & ctx) / len(judg)
+        r_sum = len(judg & summ) / len(judg)
+
+        return 0.7 * r_sum + 0.3 * r_ctx
 
     def _extract(self, text: str) -> List[str]:
         doc = self.nlp(text.lower())

@@ -1,5 +1,5 @@
 import numpy as np
-from utils import cosine_sim
+from jcjs_coherence.utils.utils import cosine_sim
 from cfg import ALPHA_S, ALPHA_N
 from tqdm import tqdm
 from embedding_model import Embedder

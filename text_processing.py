@@ -1,5 +1,5 @@
 import re
-from utils import simple_normalize
+from jcjs_coherence.utils.utils import simple_normalize
 
 def minimal_clean(text):
     t = simple_normalize(text)

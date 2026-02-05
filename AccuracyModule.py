@@ -108,7 +108,7 @@ class AccuracyCalculator:
             'feb': '02', 'february': '02',
             'mar': '03', 'march': '03',
             'apr': '04', 'april': '04',
-            'may': '05',
+            'may': '05', 
             'jun': '06', 'june': '06',
             'jul': '07', 'july': '07',
             'aug': '08', 'august': '08',
@@ -254,7 +254,7 @@ class AccuracyCalculator:
     def match_facts(self, 
                    ref_facts: List[FactualElement], 
                    cand_facts: List[FactualElement],
-                   similarity_threshold: float = 0.8) -> Tuple[List[Dict], float]:
+                   similarity_threshold: float = 0.6) -> Tuple[List[Dict], float]:
         matches = []
         total_ref = len(ref_facts)
         
@@ -281,8 +281,8 @@ class AccuracyCalculator:
         if ref_embeddings.size(0) == 0 or cand_embeddings.size(0) == 0:
             return [], 0.0
 
-        from utils.utils import cosine_sim
-        cosine_scores = cosine_sim(ref_embeddings, cand_embeddings)
+        from utils.utils import cos_sim
+        cosine_scores = cos_sim(ref_embeddings, cand_embeddings)
     
         cand_matched = set()
         
@@ -303,9 +303,9 @@ class AccuracyCalculator:
                     if j in cand_matched:
                         continue
                     
-                    if (ref_fact.entity_type and cand_fact.entity_type and 
-                        ref_fact.entity_type != cand_fact.entity_type):
-                        continue
+                    # if (ref_fact.entity_type and cand_fact.entity_type and 
+                    #     ref_fact.entity_type != cand_fact.entity_type):
+                    #     continue
                     
                     similarity = rfuzz.ratio(ref_fact.normalized, cand_fact.normalized) / 100
                     
@@ -338,40 +338,59 @@ class AccuracyCalculator:
         accuracy = total_matched / total_ref
         
         return matches, accuracy
-    
-    def compute_accuracy(self, 
-                        conversation_text: str, 
-                        judgment_text: str,
-                        include_prompt: bool = True,
-                        prompt_text: str = None) -> Dict:
-        
-        reference_text = conversation_text
+    def compute_accuracy(
+        self,
+        conversation_text: str,
+        judgment_text: str,
+        include_prompt: bool = False,
+        prompt_text: str = None
+    ) -> Dict:
+
+        context_text = conversation_text
         if include_prompt and prompt_text:
-            reference_text = f"{prompt_text}\n{conversation_text}"
-        
-        ref_facts = self.extract_facts(reference_text, "reference")
-        cand_facts = self.extract_facts(judgment_text, "judgment")
-        
-        matches, accuracy_score = self.match_facts(ref_facts, cand_facts)
-        
-        fact_breakdown = []
-        for match in matches:
-            fact_breakdown.append({
-                'reference_fact': match['reference'].text,
-                'reference_normalized': match['reference'].normalized,
-                'matched_candidate': match['candidate'].text if match['candidate'] else None,
-                'match_score': match['match_score'],
-                'match_type': match['match_type']
-            })
-        
+            context_text = f"{prompt_text}\n{conversation_text}"
+
+        context_facts = self.extract_facts(context_text, "context")
+        judge_facts = self.extract_facts(judgment_text, "judge")
+
+        context_facts = [
+            f for f in context_facts
+            if f.entity_type not in {"SPEAKER"}
+        ]
+
+        judge_facts = [
+            f for f in judge_facts
+            if f.entity_type not in {"SPEAKER"}
+        ]
+
+        matches, _ = self.match_facts(
+            ref_facts=context_facts,
+            cand_facts=judge_facts,
+            similarity_threshold=0.6
+        )
+
+        supported = sum(1 for m in matches if m["candidate"] is not None)
+        total = len(judge_facts)
+
+        accuracy = supported / max(1, total)
+
         return {
-            'accuracy_score': accuracy_score,
-            'total_reference_facts': len(ref_facts),
-            'matched_facts': sum(1 for m in matches if m['candidate'] is not None),
-            'fact_breakdown': fact_breakdown,
-            'reference_facts': [{'text': f.text, 'normalized': f.normalized} for f in ref_facts],
-            'candidate_facts': [{'text': f.text, 'normalized': f.normalized} for f in cand_facts]
+            "accuracy_score": round(accuracy, 3),
+            "judge_fact_count": total,
+            "supported_facts": supported,
+            "unsupported_facts": total - supported,
+            "support_breakdown": [
+                {
+                    "judge_fact": m["candidate"].text if m["candidate"] else None,
+                    "matched_context_fact": m["reference"].text if m["candidate"] else None,
+                    "match_score": round(m["match_score"], 3),
+                    "status": "supported" if m["candidate"] else "hallucinated"
+                }
+                for m in matches
+                if m["candidate"]
+            ]
         }
+
 
 if __name__ == "__main__":
     calculator = AccuracyCalculator()

@@ -8,13 +8,14 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--mode",
+        
         choices=["lexical", "semantic"],
         default="lexical"
     )
     parser.add_argument(
         "--threshold",
         type=float,
-        default=0.6
+        default=0.3
     )
 
     args = parser.parse_args()
@@ -29,10 +30,10 @@ def main():
     else:
         relevance = RelevanceParser(mode="lexical")
 
-    for i, (conv, judg) in enumerate(
-        zip(summaries, conversations), start=1
+    for i, (s,c,j) in enumerate(
+        zip(summaries, conversations,judgments), start=1
     ):
-        score = relevance.compute(conv, judg)
+        score = relevance.compute(c,s,j)
         scores.append(score)
         print(f"Doing.. {i}: {score:.7f}")
     print("Overall : ",np.mean(scores))

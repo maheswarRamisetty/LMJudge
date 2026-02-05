@@ -21,148 +21,86 @@ if "avg_results" not in st.session_state:
 
 def get_embedding_similarity_insight(score):
     if 0.75 <= score <= 1.0:
-        return "✅ Very Strong - Rare mistakes, covers most facts strongly (Should be enquired for bias if >0.8)"
+        return "Very Strong - Rare mistakes, covers most facts strongly (Should be enquired for bias if >0.8)"
     elif 0.6 <= score < 0.75:
-        return "👍 Strong - Reliable fact checking, facts present mostly (Accepted)"
+        return  "Strong - Reliable fact checking, facts present mostly (Accepted)"
     elif 0.45 <= score < 0.6:
-        return "⚠️ Usable - Gets obvious cases right, strict towards facts (Needs constraints)"
+        return "Usable - Gets obvious cases right, strict towards facts (Needs constraints)"
     elif 0.3 <= score < 0.45:
-        return "⚡ Weak Signal - Often wrong about presence (Misleads evaluation)"
+        return "Weak Signal - Often wrong about presence (Misleads evaluation)"
     else:
-        return "❌ Unreliable - Random guessing (Completely unusable)"
+        return "Unreliable - Random guessing (Completely unusable)"
 
 def get_nli_insight(score):
     if 0.75 <= score <= 1.0:
-        return "✅ Very Strong - Rare mistakes, covers most facts strongly (Should be enquired for bias if >0.8)"
+        return "Very Strong - Rare mistakes, covers most facts strongly (Should be enquired for bias if >0.8)"
     elif 0.6 <= score < 0.75:
-        return "👍 Strong - Reliable fact checking, facts present mostly (Accepted)"
+        return "Strong - Reliable fact checking, facts present mostly (Accepted)"
     elif 0.45 <= score < 0.6:
-        return "⚠️ Usable - Gets obvious cases right, strict towards facts (Needs constraints)"
+        return "Usable - Gets obvious cases right, strict towards facts (Needs constraints)"
     elif 0.3 <= score < 0.45:
-        return "⚡ Weak Signal - Often wrong about presence (Misleads evaluation)"
+        return "Weak Signal - Often wrong about presence (Misleads evaluation)"
     else:
-        return "❌ Unreliable - Random guessing (Completely unusable)"
+        return "Unreliable - Random guessing (Completely unusable)"
 
 def get_cpath_insight(score):
     if 0.75 <= score <= 1.0:
-        return "✅ Very Fluent - Over covers mostly"
+        return "Very Fluent - Over covers mostly"
     elif 0.6 <= score < 0.75:
-        return "👍 Fluent - Via logic (Accepted)"
+        return "Fluent - Via logic (Accepted)"
     elif 0.46 <= score < 0.6:
-        return "⚠️ Understandable - Moderate quality"
+        return "Understandable - Moderate quality"
     else:
-        return "❌ Confused - Bad quality"
+        return "Confused - Bad quality"
 
 def get_jscore_insight(score):
     if 0.75 <= score <= 1.0:
-        return "✅ Very Fluent - Over covers mostly"
+        return "Very Fluent - Over covers mostly"
     elif 0.6 <= score < 0.75:
-        return "👍 Fluent - Via logic (Accepted)"
+        return "Fluent - Via logic (Accepted)"
     elif 0.46 <= score < 0.6:
-        return "⚠️ Understandable - Moderate quality"
+        return "Understandable - Moderate quality"
     else:
-        return "❌ Confused - Bad quality"
+        return "Confused - Bad quality"
 
-def get_recall_insight(score):
-    if 0.7 <= score <= 1.0:
-        return "✅ Strong - Rare omissions, covers most facts (Ideal/Acceptable)"
-    elif 0.5 <= score < 0.7:
-        return "⚠️ Moderate - Captures main facts but misses some details"
-    elif 0.3 <= score < 0.5:
-        return "⚡ Partial - Finds some facts but inconsistent coverage"
-    else:
-        return "❌ Incomplete - Misses most facts, under-reporting risk"
-
-def get_precision_insight(score):
-    if 0.75 <= score <= 1.0:
-        return "✅ Very Strong - Rare mistakes, covers most facts strongly"
-    elif 0.6 <= score < 0.75:
-        return "👍 Strong - Reliable fact checking, facts present mostly (Accepted)"
-    elif 0.45 <= score < 0.6:
-        return "⚠️ Usable - Gets obvious cases right, strict towards facts"
-    elif 0.3 <= score < 0.45:
-        return "⚡ Weak Signal - Often wrong about presence"
-    else:
-        return "❌ Unreliable - Random guessing (Completely unusable)"
-
-def get_f1_insight(score):
-    if 0.7 <= score <= 1.0:
-        return "✅ Strong - Rare omissions, covers most facts (Ideal)"
-    elif 0.5 <= score < 0.7:
-        return "⚠️ Moderate - Captures main facts (Acceptable)"
-    elif 0.3 <= score < 0.5:
-        return "⚡ Partial - Finds some facts (Inconsistent)"
-    else:
-        return "❌ Incomplete - Misses most facts (Under-reporting risk)"
-
-def get_rouge_insight(score):
-    if 0.7 <= score <= 1.0:
-        return "✅ Strong - Rare omissions, covers most facts (Ideal)"
-    elif 0.5 <= score < 0.7:
-        return "⚠️ Moderate - Captures main facts (Acceptable)"
-    elif 0.3 <= score < 0.5:
-        return "⚡ Partial - Finds some facts (Inconsistent)"
-    else:
-        return "❌ Incomplete - Misses most facts (Under-reporting risk)"
-
-def get_bleu_insight(score):
-    if 0.75 <= score <= 1.0:
-        return "✅ Very Fluent - Over covers mostly"
-    elif 0.6 <= score < 0.75:
-        return "👍 Fluent - Via logic (Accepted)"
-    elif 0.46 <= score < 0.6:
-        return "⚠️ Understandable - Moderate quality"
-    else:
-        return "❌ Confused - Bad quality"
-
-def get_meteor_insight(score):
-    if 0.7 <= score <= 1.0:
-        return "✅ Strong - Rare omissions, covers most facts (Ideal)"
-    elif 0.5 <= score < 0.7:
-        return "⚠️ Moderate - Captures main facts (Acceptable)"
-    elif 0.3 <= score < 0.5:
-        return "⚡ Partial - Finds some facts (Inconsistent)"
-    else:
-        return "❌ Incomplete - Misses most facts (Under-reporting risk)"
-
-def get_bertscore_insight(score):
-    if 0.75 <= score <= 1.0:
-        return "✅ Very Strong - Rare mistakes, covers most facts strongly"
-    elif 0.6 <= score < 0.75:
-        return "👍 Strong - Reliable fact checking, facts present mostly (Accepted)"
-    elif 0.45 <= score < 0.6:
-        return "⚠️ Usable - Gets obvious cases right, strict towards facts"
-    elif 0.3 <= score < 0.45:
-        return "⚡ Weak Signal - Often wrong about presence"
-    else:
-        return "❌ Unreliable - Random guessing (Completely unusable)"
-
-def get_moverscore_insight(score):
-    if 0.75 <= score <= 1.0:
-        return "✅ Very Strong - Rare mistakes, covers most facts strongly"
-    elif 0.6 <= score < 0.75:
-        return "👍 Strong - Reliable fact checking, facts present mostly (Accepted)"
-    elif 0.45 <= score < 0.6:
-        return "⚠️ Usable - Gets obvious cases right, strict towards facts"
-    elif 0.3 <= score < 0.45:
-        return "⚡ Weak Signal - Often wrong about presence"
-    else:
-        return "❌ Unreliable - Random guessing (Completely unusable)"
-
-def get_bartscore_insight(score):
-    if 0.75 <= score <= 1.0:
-        return "✅ Very Strong - Rare mistakes, covers most facts strongly"
-    elif 0.6 <= score < 0.75:
-        return "👍 Strong - Reliable fact checking, facts present mostly (Accepted)"
-    elif 0.45 <= score < 0.6:
-        return "⚠️ Usable - Gets obvious cases right, strict towards facts"
-    elif 0.3 <= score < 0.45:
-        return "⚡ Weak Signal - Often wrong about presence"
-    else:
-        return "❌ Unreliable - Random guessing (Completely unusable)"
 
 def get_accuracy(score):
-    if 0.75 <=score <=
+    if 0.75 <=score <= 1.0:
+        return "Covers all facts that are in Conversation well"
+    elif 0.6 <= score < 0.75:
+        return "Missing some of the facts - Coverage is limited"
+    elif 0.3 <= score <0.6:
+        return "Misses some important facts"
+    else:
+        return "Misses the facts completely"
+    
+def get_completeness(score):
+    if 0.70 <= score <= 1.0:
+        return "Recalling facts and Discourse Unit is Well defined"
+    elif 0.50 <= score < 0.70:
+        return "Entities are missing"
+    elif 0.25<= score < 0.50:
+        return "Semantc reacall and Entities are missed"
+    else:
+        return "Misses discourse units and semantic slots completely"
+
+def get_relevance(score):
+    if 0.7<= score <=1.0:
+        return "Judgement is relevant semantically"
+    elif 0.5<=score<0.7:
+        return "INformation Retrival is some what relevant"
+    elif 0.25<=score<0.5:
+        return "Judgement is not related to the Conversation"
+    else:
+        return "Lexical Match"
+
+def get_clarity(score):
+    if 0.75<=score <=1.0:
+        return "Judgement is correct and readable"
+    elif 0.50<=score<0.75:
+        return "Judgementis not able to find pronoun clarity and model need to work on information density"
+    else:
+        return "Information coverage is poor"
 
 def get_metric_insight(metric_name, score):
     metric_lower = metric_name.lower().strip()
@@ -177,27 +115,17 @@ def get_metric_insight(metric_name, score):
     elif "Accuracy" in metric_lower:
         return get_accuracy(score)
     
-    elif "jscore" in metric_lower or "j-score" in metric_lower:
-        return get_jscore_insight(score)
-    elif "recall" in metric_lower:
-        return get_recall_insight(score)
-    elif "precision" in metric_lower:
-        return get_precision_insight(score)
-    elif "f1" in metric_lower:
-        return get_f1_insight(score)
-    elif "rouge" in metric_lower:
-        return get_rouge_insight(score)
-    elif "bleu" in metric_lower:
-        return get_bleu_insight(score)
-    elif "meteor" in metric_lower:
-        return get_meteor_insight(score)
-    elif "bertscore" in metric_lower or "bert" in metric_lower:
-        return get_bertscore_insight(score)
-    elif "moverscore" in metric_lower or "mover" in metric_lower:
-        return get_moverscore_insight(score)
-    elif "bartscore" in metric_lower or "bart" in metric_lower:
-        return get_bartscore_insight(score)
+    elif "Completeness" in metric_lower:
+        return get_completeness(score)
+    elif "Relevance" in metric_lower:
+        return get_relevance(score)
     
+    elif "Clarity" in metric_lower:
+        return get_clarity(score)
+    
+    elif "jscore" in metric_lower or "JCJS" in metric_lower:
+        return get_jscore_insight(score)
+   
     else:
         return f"ℹ️ Score: {score:.4f} - Metric '{metric_name}' not recognized"
 
@@ -222,7 +150,7 @@ if uploaded_file:
     st.success(f"Loaded {len(summaries)} rows")
 
     if st.button("🚀 Run Evaluation"):
-        with st.spinner("Evaluating summaries..."):
+        with st.spinner("Evaluating Judgements..."):
             all_scores = []
 
             for i in range(len(summaries)):

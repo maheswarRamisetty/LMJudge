@@ -409,7 +409,7 @@ if __name__ == "__main__":
         print(f"\n===== Row {idx} =====")
         
         result = calculator.compute_accuracy(
-            conversation_text=conversation,
+            conversation_text=call_summary,
             judgment_text=judgment,
             include_prompt=False,
             prompt_text=None    

@@ -1,0 +1,12 @@
+Example for Completeness Score : 
+
+Conversation:
+"Customer charged ₹500 for roaming on June 10-13. 
+Roaming was disabled. Agent will reverse in 24 hours."
+
+Summary:
+"Customer had roaming charge issue."
+
+Judgment:
+"Summary is missing: amount (₹500), dates (June 10-13), 
+roaming status (disabled), timeline (24 hours)."

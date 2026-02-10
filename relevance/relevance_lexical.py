@@ -1,35 +1,36 @@
 import spacy
 import re
-from typing import List
+from typing import List, Set
 from relevance.base_relevance import BaseRelevance
 
 
-class LexicalRelevanceModule(BaseRelevance):
+class LexicalRelevanceModule(BaseRelevance):    
     def __init__(self, model="en_core_web_sm"):
         self.nlp = spacy.load(model)
 
-    def compute_relevance(
-        self, conversation: str, summary: str, judgment: str
-    ) -> float:
+    def compute_relevance(self, conversation: str, judgment: str) -> float:
+       
+        ctx_elements = set(self._extract(conversation))
+        judg_elements = set(self._extract(judgment))
 
-        ctx = set(self._extract(conversation))
-        summ = set(self._extract(summary))
-        judg = set(self._extract(judgment))
-
-        if not judg:
+        if not judg_elements or not ctx_elements:
             return 0.0
 
-        r_ctx = len(judg & ctx) / len(judg)
-        r_sum = len(judg & summ) / len(judg)
-
-        return 0.7 * r_sum + 0.3 * r_ctx
+        intersection = len(judg_elements & ctx_elements)
+        union = len(judg_elements | ctx_elements)
+        
+        jaccard = intersection / union if union > 0 else 0.0
+        
+        return jaccard
 
     def _extract(self, text: str) -> List[str]:
+        
         doc = self.nlp(text.lower())
+        # print(doc)
         elements = set()
 
         for ent in doc.ents:
-            elements.add(self._norm(ent.text, ent.label_))
+            elements.add(self._normalize_entity(ent.text, ent.label_))
 
         for chunk in doc.noun_chunks:
             if 1 <= len(chunk.text.split()) <= 3:
@@ -43,7 +44,8 @@ class LexicalRelevanceModule(BaseRelevance):
 
         return list(elements)
 
-    def _norm(self, text: str, label: str) -> str:
+    def _normalize_entity(self, text: str, label: str) -> str:
+        
         text = re.sub(r"[^\w\s-]", "", text.lower())
         text = re.sub(r"\s+", "_", text)
 

@@ -24,8 +24,7 @@ def main():
     scores =[]
     if args.mode == "semantic":
         relevance = RelevanceParser(
-            mode="semantic",
-            threshold=args.threshold
+            mode="semantic"
         )
     else:
         relevance = RelevanceParser(mode="lexical")
@@ -33,7 +32,7 @@ def main():
     for i, (s,c,j) in enumerate(
         zip(summaries, conversations,judgments), start=1
     ):
-        score = relevance.compute(c,s,j)
+        score = relevance.compute(c,j)
         scores.append(score)
         print(f"Doing.. {i}: {score:.7f}")
     print("Overall : ",np.mean(scores))

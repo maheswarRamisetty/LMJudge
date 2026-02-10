@@ -170,24 +170,26 @@ def main():
     from data_loader import load_csv
     summaries,convs,judgments = load_csv(DATA_PATH) 
     scores=[]
+    # print(judgments)
     for idx,c in enumerate(judgments):
 
-        print(f"DOING {idx+1} : ",end="\t")
+        # print(f"DOING {idx+1} : ",end="\t")
 
         result = calculator.compute_clarity_score(c)
         
-        print(f"Clarity Score: {result['clarity_score']:.4f}")
-        print(f"Component Scores:")
-        print(f"  R (Readability): {result['component_scores']['R']:.4f}")
-        print(f"  S (Syntactic Simplicity): {result['component_scores']['S']:.4f}")
-        print(f"  D (Disambiguation Index): {result['component_scores']['D']:.4f}")
-        print(f"  P (Pronoun Clarity): {result['component_scores']['P']:.4f}")
+        # print(f"Clarity Score: {result['clarity_score']:.4f}")
+        # print(f"Component Scores:")
+        # print(f"  R (Readability): {result['component_scores']['R']:.4f}")
+        # print(f"  S (Syntactic Simplicity): {result['component_scores']['S']:.4f}")
+        # print(f"  D (Disambiguation Index): {result['component_scores']['D']:.4f}")
+        # print(f"  P (Pronoun Clarity): {result['component_scores']['P']:.4f}")
         
       
-        print(f"\nTotal: {result['clarity_score']:.4f}")
+        # print(f"\nTotal: {result['clarity_score']:.4f}")
         scores.append(result['clarity_score'])
 
     print("Avg Score : ",np.mean(scores))
+    print(judgments)
     
 
 if __name__ == "__main__":

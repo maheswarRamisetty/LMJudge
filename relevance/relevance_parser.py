@@ -3,13 +3,16 @@ from relevance.relevance_semantic import SemanticRelevanceModule
 
 
 class RelevanceParser:
+    
     def __init__(self, mode="lexical", **kwargs):
-        if mode == "lexical":
-            self.module = LexicalRelevanceModule()
-        elif mode == "semantic":
+   
+        self.mode = mode
+        
+        if mode == "semantic":
             self.module = SemanticRelevanceModule(**kwargs)
         else:
-            raise ValueError(f"Unsupported mode: {mode}")
-
-    def compute(self, conversation: str, summary: str, judgment: str) -> float:
-        return self.module.compute_relevance(conversation, summary, judgment)
+            self.module = LexicalRelevanceModule(**kwargs)
+    
+    def compute(self, conversation: str, judgment: str) -> float:
+        
+        return self.module.compute_relevance(conversation, judgment)

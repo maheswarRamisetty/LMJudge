@@ -32,7 +32,7 @@ client = AzureOpenAI(
 
 deployment_name = "gpt-5"
 
-df = pd.read_csv("../src/dataset.csv")
+df = pd.read_csv("./data/three/three.csv")
 
 if 'summary' not in df.columns:
     df['summary'] = pd.NA
@@ -63,5 +63,5 @@ for idx, row in tqdm(df.head(200).iterrows(), total=200, desc="Generating summar
             print(f"Error on row {idx}: {e}")
             df.at[idx, 'summary'] = pd.NA
 
-df.to_csv("/data/one/datasummaries.csv", index=False)
+df.to_csv("datasummareis.csv", index=False)
 print("Summaries generated and saved!")

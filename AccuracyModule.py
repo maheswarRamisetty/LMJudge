@@ -409,8 +409,8 @@ class FactualElement:
     normalized: str
     entity_type: str = None
     value: Any = None
-    context: str = None  # NEW: track source (conversation/response/judgment)
-    semantic_frame: str = None  # NEW: for completeness module
+    context: str = None  
+    semantic_frame: str = None 
 
 
 class AccuracyCalculator:    
@@ -433,36 +433,28 @@ class AccuracyCalculator:
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         
     def extract_facts(self, text: str, context: str = "unknown") -> List[FactualElement]:
-        """Extract factual elements with improved patterns and context tracking"""
         facts = []
         doc = self.nlp(text)
-        
-        # Spacy NER
+    
         for ent in doc.ents:
             fact = self._normalize_entity(ent.text, ent.label_, context)
             facts.append(fact)
-        
-        # Pattern-based extraction (enhanced)
+
         facts.extend(self._extract_with_patterns(text, context))
-        
-        # Rule-based extraction
+
         facts.extend(self._extract_with_rules(text, doc, context))
-        
-        # Transformer NER (if available)
+  
         if self.ner_pipeline and len(text) < 512: 
             facts.extend(self._extract_with_transformers(text, context))
-        
-        # Deduplicate
+
         facts = self._deduplicate_facts(facts)
         
         return facts
     
     def _normalize_entity(self, text: str, entity_type: str, context: str) -> FactualElement:
-        """Enhanced normalization with semantic frame detection"""
         normalized = text.lower().strip()
         semantic_frame = None
         
-        # Detect semantic frames for completeness module
         if entity_type in ["MONEY", "CARDINAL"]:
             semantic_frame = "FINANCIAL_TRANSACTION"
             numbers = re.findall(r'\d+\.?\d*', text)
@@ -484,12 +476,11 @@ class AccuracyCalculator:
         
         elif entity_type == "TIME":
             semantic_frame = "TEMPORAL"
-            # Extract time duration
             time_match = re.search(r'(\d+)\s*(hours?|hrs?|days?|minutes?|mins?)', text, re.IGNORECASE)
             if time_match:
                 num = time_match.group(1)
                 unit = time_match.group(2).lower()
-                # Normalize units
+          
                 if 'hour' in unit or 'hr' in unit:
                     normalized = f"{num}_hours"
                 elif 'day' in unit:
@@ -513,7 +504,7 @@ class AccuracyCalculator:
         )
     
     def _normalize_date(self, date_text: str) -> str:
-        """Enhanced date normalization"""
+        
         months = {
             'jan': '01', 'january': '01', 'feb': '02', 'february': '02',
             'mar': '03', 'march': '03', 'apr': '04', 'april': '04',
@@ -524,8 +515,7 @@ class AccuracyCalculator:
         }
         
         date_lower = date_text.lower()
-        
-        # Check for date ranges (e.g., "June 10 and June 13")
+    
         range_match = re.search(r'(\w+)\s+(\d+)\s+(?:and|to|-)\s+(\w+)?\s*(\d+)', date_text, re.IGNORECASE)
         if range_match:
             month1 = range_match.group(1).lower()
@@ -536,7 +526,7 @@ class AccuracyCalculator:
             if month1 in months and month2 in months:
                 return f"{months[month1]}_{day1}_to_{months[month2]}_{day2}"
         
-        # Single date
+        
         for month_name, month_num in months.items():
             if month_name in date_lower:
                 day_match = re.search(r'(\d{1,2})(?:\s|st|nd|rd|th)', date_text)
@@ -548,8 +538,7 @@ class AccuracyCalculator:
     def _extract_with_patterns(self, text: str, context: str) -> List[FactualElement]:
         """Enhanced pattern extraction for telecom domain"""
         facts = []
-        
-        # Currency patterns
+
         currency_patterns = [
             (r'₹\s*(\d+(?:,\d+)*(?:\.\d+)?)', "MONEY", "INR"),
             (r'\$\s*(\d+(?:,\d+)*(?:\.\d+)?)', "MONEY", "USD"),
@@ -568,7 +557,6 @@ class AccuracyCalculator:
                     semantic_frame="FINANCIAL_TRANSACTION"
                 ))
         
-        # Time/duration patterns
         time_patterns = [
             (r'(\d+)\s*(hours?|hrs?)', "TIME"),
             (r'(\d+)\s*(days?)', "TIME"),
@@ -589,7 +577,6 @@ class AccuracyCalculator:
                     semantic_frame="TEMPORAL"
                 ))
         
-        # Action/decision patterns (important for judgments!)
         action_patterns = [
             (r'(?:raised|created|opened)\s+(?:a\s+)?ticket', "ACTION", "ticket_raised"),
             (r'(?:initiated|started|began)\s+(?:the\s+)?reversal', "ACTION", "reversal_initiated"),
@@ -616,10 +603,8 @@ class AccuracyCalculator:
         return facts
     
     def _extract_with_rules(self, text: str, doc, context: str) -> List[FactualElement]:
-        """Rule-based extraction with context"""
         facts = []
-        
-        # Number + Noun patterns
+       
         for token in doc:
             if token.like_num:
                 for child in token.children:
@@ -633,7 +618,7 @@ class AccuracyCalculator:
                             context=context
                         ))
         
-        # Negation patterns
+      
         for token in doc:
             if token.dep_ == "neg":
                 head = token.head
@@ -649,7 +634,6 @@ class AccuracyCalculator:
         return facts
     
     def _extract_with_transformers(self, text: str, context: str) -> List[FactualElement]:
-        """Transformer-based NER"""
         facts = []
         try:
             entities = self.ner_pipeline(text)
@@ -667,12 +651,11 @@ class AccuracyCalculator:
         return facts
     
     def _deduplicate_facts(self, facts: List[FactualElement]) -> List[FactualElement]:
-        """Deduplicate with improved key generation"""
         seen = set()
         unique_facts = []
         
         for fact in facts:
-            # Use normalized value and type as key, not context
+        
             key = (fact.normalized, fact.entity_type)
             if key not in seen:
                 seen.add(key)
@@ -686,27 +669,18 @@ class AccuracyCalculator:
                    similarity_threshold: float = 0.55,
                    strict_entity_types: bool = False,
                    allow_semantic_equivalence: bool = True) -> Tuple[List[Dict], float]:
-        """
-        Enhanced fact matching with semantic equivalence
-        
-        Args:
-            ref_facts: Reference facts (source of truth)
-            cand_facts: Candidate facts (to be validated)
-            similarity_threshold: Minimum similarity score
-            strict_entity_types: Require exact entity type match
-            allow_semantic_equivalence: Allow semantically equivalent terms
-        """
+       
         matches = []
         total_ref = len(ref_facts)
         
         if total_ref == 0:
-            return matches, 1.0  # No facts to validate = perfect
+            return matches, 1.0 
             
         ref_texts = [fact.normalized for fact in ref_facts]
         cand_texts = [fact.normalized for fact in cand_facts]
 
         if len(cand_texts) == 0:
-            # All reference facts are unsupported
+           
             for ref_fact in ref_facts:
                 matches.append({
                     'reference': ref_fact,
@@ -716,17 +690,16 @@ class AccuracyCalculator:
                 })
             return matches, 0.0
 
-        # Compute embeddings
+        
         ref_embeddings = self.embedding_model.encode(ref_texts, convert_to_tensor=True)
         cand_embeddings = self.embedding_model.encode(cand_texts, convert_to_tensor=True)
 
         if ref_embeddings.size(0) == 0 or cand_embeddings.size(0) == 0:
             return [], 0.0
 
-        # Cosine similarity matrix
         cosine_scores = util.cos_sim(ref_embeddings, cand_embeddings)
         
-        # Semantic equivalence dictionary (for telecom domain)
+     
         semantic_equivalents = {
             'reversal_initiated': {'charges_reversed', 'reversal', 'refund_initiated', 'initiated_reversal'},
             'charges_reversed': {'reversal_initiated', 'reversal', 'refund_initiated', 'initiated_reversal'},
@@ -744,7 +717,7 @@ class AccuracyCalculator:
             best_score = 0
             best_j = -1
             
-            # 1. Exact match
+           
             for j, cand_fact in enumerate(cand_facts):
                 if cand_fact.normalized == ref_fact.normalized:
                     best_match = cand_fact
@@ -752,7 +725,7 @@ class AccuracyCalculator:
                     best_j = j
                     break
             
-            # 2. Semantic equivalence check
+        
             if not best_match and allow_semantic_equivalence:
                 ref_norm = ref_fact.normalized
                 if ref_norm in semantic_equivalents:
@@ -761,28 +734,24 @@ class AccuracyCalculator:
                             continue
                         if cand_fact.normalized in semantic_equivalents[ref_norm]:
                             best_match = cand_fact
-                            best_score = 0.95  # High but not perfect
+                            best_score = 0.95  
                             best_j = j
                             break
             
-            # 3. Fuzzy + embedding similarity
+         
             if not best_match:
                 for j, cand_fact in enumerate(cand_facts):
                     if j in cand_matched:
                         continue
                     
-                    # Optional: strict entity type matching
                     if strict_entity_types and (ref_fact.entity_type and cand_fact.entity_type and 
                         ref_fact.entity_type != cand_fact.entity_type):
                         continue
                     
-                    # Fuzzy string similarity
                     string_sim = rfuzz.ratio(ref_fact.normalized, cand_fact.normalized) / 100
                     
-                    # Embedding similarity
                     embedding_sim = cosine_scores[i][j].item()
                     
-                    # Combined score (weighted)
                     combined_score = 0.4 * string_sim + 0.6 * embedding_sim
                     
                     if combined_score > best_score and combined_score >= similarity_threshold:
@@ -817,46 +786,27 @@ class AccuracyCalculator:
         llm_response_text: str,
         judgment_text: str,
         prompt_text: str = None,
-        mode: str = "precision"  # "precision", "recall", or "both"
+        mode: str = "precision" 
     ) -> Dict:
-        """
-        REVISED: Compute accuracy for judge evaluation
-        
-        Args:
-            conversation_text: Original conversation
-            llm_response_text: LLM's response to evaluate
-            judgment_text: Judge's evaluation
-            prompt_text: Optional prompt
-            mode: What to measure
-                - "precision": Are judgment's facts grounded? (recommended for judges)
-                - "recall": Does judgment capture all source facts?
-                - "both": Compute both metrics
-        
-        Returns:
-            Dictionary with accuracy metrics
-        """
-        # Extract facts from source materials (conversation + LLM response)
+       
         conv_facts = self.extract_facts(conversation_text, "conversation")
         llm_facts = self.extract_facts(llm_response_text, "llm_response")
         
-        # Combine source facts (deduplicated)
         source_facts = conv_facts + llm_facts
         source_facts = self._deduplicate_facts(source_facts)
         
-        # Extract facts from judgment
         judge_facts = self.extract_facts(judgment_text, "judgment")
         
-        # Remove speaker entities from all
         source_facts = [f for f in source_facts if f.entity_type not in {"SPEAKER"}]
         judge_facts = [f for f in judge_facts if f.entity_type not in {"SPEAKER"}]
         
         result = {}
         
-        # PRECISION: Are judge's claims grounded in source materials?
+      
         if mode in ["precision", "both"]:
             precision_matches, _ = self.match_facts(
-                ref_facts=judge_facts,       # What judge claimed
-                cand_facts=source_facts,     # What's in conversation + response
+                ref_facts=judge_facts,       
+                cand_facts=source_facts,     
                 similarity_threshold=0.55,
                 allow_semantic_equivalence=True
             )
@@ -882,11 +832,11 @@ class AccuracyCalculator:
             result["hallucinated_facts"] = len(hallucinations)
             result["hallucination_details"] = hallucinations
         
-        # RECALL: Does judge capture important source facts?
+        
         if mode in ["recall", "both"]:
             recall_matches, _ = self.match_facts(
-                ref_facts=source_facts,      # What's in conversation + response
-                cand_facts=judge_facts,      # What judge mentioned
+                ref_facts=source_facts,      
+                cand_facts=judge_facts,     
                 similarity_threshold=0.55,
                 allow_semantic_equivalence=True
             )
@@ -900,16 +850,14 @@ class AccuracyCalculator:
             result["captured_facts"] = captured
             result["missed_facts"] = total_source - captured
         
-        # F1 Score if both metrics computed
         if mode == "both":
             p = result["precision"]
             r = result["recall"]
             result["f1_score"] = round(2 * (p * r) / max(0.001, p + r), 3)
         
-        # PRIMARY METRIC FOR JUDGES: Precision
+        
         result["accuracy_score"] = result.get("precision", result.get("recall", 0))
         
-        # Detailed breakdown
         if mode == "precision":
             result["fact_breakdown"] = [
                 {
@@ -925,7 +873,6 @@ class AccuracyCalculator:
         return result
 
 
-# ==================== USAGE EXAMPLE ====================
 if __name__ == "__main__":
     calculator = AccuracyCalculator()
     
@@ -939,12 +886,11 @@ if __name__ == "__main__":
     summaries,call_convs,judgments = load_csv(DATA_PATH)
     scores = []
     for idx,(c,s,j) in enumerate(zip(call_convs,summaries,judgments)):
-    # Compute accuracy (PRECISION mode - recommended for judges)
         result = calculator.compute_accuracy(
             conversation_text=c,
             llm_response_text=s,
             judgment_text=j,
-            mode="precision"  # Focus on: no hallucinations!
+            mode="precision" 
         )
         
         print("\n===== ACCURACY RESULTS =====")

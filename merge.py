@@ -16,6 +16,18 @@ if __name__ == "__main__":
     # df = load_csv(DATA_PATH, CALL_CONV_PATH)
     # print(df.head())
 
-    df = pd.read_csv(DATA_PATH,nrows=10)
-    df.to_csv("first50.csv",index=False)
-    print("File Saved")
+    # df = pd.read_csv(DATA_PATH,nrows=10)
+    # df.to_csv("first50.csv",index=False)
+    # print("File Saved")
+
+    df = pd.read_csv("./data.csv")
+    unique_topics = df['topic'].dropna().unique()
+    # print(len(unique_topics))
+
+    unique_topic_chains = (
+    df[["topic", "subtopic", "subsubtopic"]]
+    .dropna(how="all")
+    .drop_duplicates())
+
+    print(f"\nTotal unique topic hierarchies: {len(unique_topic_chains)}")
+    print(unique_topic_chains.head())

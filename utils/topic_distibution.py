@@ -32,13 +32,16 @@ plt.tight_layout()
 plt.savefig(PLOT_FILE)
 plt.show()
 
-data1 = df[df['topic']=='Hobbies']
-data2 = df[df['topic']=='Transportation']
-data3 = df[df['topic']=='astronomy']
-data4 = df[df['topic']=='ecosystems']
+data1 = df[df['topic']=='Cooking']
+data2 = df[df['topic']=='Sports']
+data3 = df[df['topic']=='Weather']
+data4 = df[df['topic']=='Entertainment']
+data5 = df[df['topic']=='sound']
+data6 = df[df['topic']=='earth']
+data7 = df[df['topic']=='language']
 
-combined = pd.concat([data1,data2,data3,data4],ignore_index=False)
-combined.to_csv("three.csv",index=False)
+combined = pd.concat([data1,data2,data3,data4,data5,data6,data7],ignore_index=False)
+combined.to_csv("five.csv",index=False)
 
 # for topic, count in topic_counts.items():
 #     topic_df = df[df["topic"] == topic]

@@ -10,3 +10,24 @@ Summary:
 Judgment:
 "Summary is missing: amount (₹500), dates (June 10-13), 
 roaming status (disabled), timeline (24 hours)."
+
+
+
+# WRONG for out use case
+completeness = evaluate_completeness(conversation, judgment)
+```
+
+**Why remove:**
+- Measures semantic/discourse overlap
+- Judge uses different discourse (evaluative vs narrative)
+- Creates false negatives (judge saying "summary is missing X" has different frames than conversation saying "X happened")
+
+**Example of failure:**
+```
+Conversation: "Customer charged ₹500"
+Judgment: "Summary is missing the amount (₹500)"
+
+Completeness sees:
+- Conv frame: "customer_charged_500" 
+- Judge frame: "summary_missing_500"
+→ No match! Low score despite judge being correct ✗

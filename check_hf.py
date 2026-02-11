@@ -32,7 +32,7 @@ client = AzureOpenAI(
 
 deployment_name = "gpt-5"
 
-df = pd.read_csv("./data/three/three.csv")
+df = pd.read_csv("./data/four/four.csv")
 
 if 'summary' not in df.columns:
     df['summary'] = pd.NA

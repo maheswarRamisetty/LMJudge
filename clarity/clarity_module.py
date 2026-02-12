@@ -189,7 +189,7 @@ def main():
         scores.append(result['clarity_score'])
 
     print("Avg Score : ",np.mean(scores))
-    print(judgments)
+    # print(judgments)
     
 
 if __name__ == "__main__":

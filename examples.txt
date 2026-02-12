@@ -31,3 +31,28 @@ Completeness sees:
 - Conv frame: "customer_charged_500" 
 - Judge frame: "summary_missing_500"
 → No match! Low score despite judge being correct ✗
+
+
+Completeness:
+coverage of information
+
+
+Why completeness breaks in your setup
+Judge output is NOT supposed to be exhaustive
+
+A judge only needs to justify decision.
+
+Example:
+
+Judge: "Summary misses refund amount."
+
+
+This is a valid judgment even if judge doesn’t mention:
+
+date
+
+customer intent
+
+agent action
+
+Your completeness metric wrongly penalizes this.

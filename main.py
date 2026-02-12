@@ -5,7 +5,7 @@ from conv_chunker import ConvChunker
 from summary_extract import SummaryExtractor
 from nli import NLIModel
 from embedding_similarity import EmbeddingSimilarity
-from completeness.completeness_module import SummaryCompletenessEvaluator
+from completeness.completeness_module import CompletenessEvaluator
 from AccuracyModule import AccuracyCalculator
 from nli_entailment import compute_nli_entailment
 from relevance.relevance_parser import RelevanceParser
@@ -60,7 +60,7 @@ def run_evaluation(csv_path):
         )['accuracy_score']
 
         # Completeness
-        comp = SummaryCompletenessEvaluator().evaluate_completeness(
+        comp = CompletenessEvaluator().evaluate_completeness(
             conversation=c,
             summary=summary
         )['completeness_score']
@@ -131,7 +131,7 @@ def evaluate_single(summary, conversation, judgment):
     )['accuracy_score']
 
     # Completeness
-    comp = SummaryCompletenessEvaluator().evaluate_completeness(
+    comp = CompletenessEvaluator().evaluate_completeness(
         conversation=conversation,
         summary=summary
     )['completeness_score']
@@ -182,7 +182,7 @@ def run_and_append(csv_path, output_csv):
 
 
 if __name__=="__main__":
-    OUTPUT_CSV = "output.csv"
+    OUTPUT_CSV = "three_output.csv"
     run_and_append(DATA_PATH,OUTPUT_CSV)
     
     

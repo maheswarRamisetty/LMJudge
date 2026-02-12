@@ -28,7 +28,7 @@ def run_evaluation(csv_path):
     fact_extractor = SummaryExtractor()
     nli_model = NLIModel()
     embed_sims = EmbeddingSimilarity()
-    relevance_module = RelevanceParser(mode="semantic", threshold=0.6)
+    relevance_module = RelevanceParser(mode="semantic")
 
     results = []
 
@@ -53,17 +53,33 @@ def run_evaluation(csv_path):
         )
 
         # Accuracy
-        acc = AccuracyCalculator().compute_accuracy(
+        # acc = AccuracyCalculator().compute_accuracy(
+        #     conversation_text=c,
+        #     judgment_text=judgment,
+
+        # )['accuracy_score']
+        calculator = AccuracyCalculator()
+
+        result = calculator.compute_accuracy(
             conversation_text=c,
-            judgment_text=judgment,
-            include_prompt=False
-        )['accuracy_score']
+            llm_response_text=s,  
+            judgment_text=j,
+            mode="precision"       
+        )
+
+        acc = result["accuracy_score"]
+
 
         # Completeness
+        # comp = CompletenessEvaluator().evaluate_completeness(
+        #     conversation=c,
+        #     summary=summary
+        # )['completeness_score']
         comp = CompletenessEvaluator().evaluate_completeness(
-            conversation=c,
-            summary=summary
-        )['completeness_score']
+        conversation=c,
+        judgment=summary
+    )['completeness_score']
+
 
         # Relevance
         rel = relevance_module.compute(

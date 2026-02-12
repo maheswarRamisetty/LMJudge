@@ -21,6 +21,8 @@ weights = {
     'wCL': 0.25
 }
 
+from tqdm import tqdm
+
 def run_evaluation(csv_path):
     summaries, conversations, judgments = load_csv(csv_path)
 
@@ -32,7 +34,12 @@ def run_evaluation(csv_path):
 
     results = []
 
-    for idx, (s, c, j) in enumerate(zip(summaries, conversations, judgments), start=1):
+    for idx, (s, c, j) in enumerate(
+        tqdm(zip(summaries, conversations, judgments),
+             total=len(summaries),
+             desc="Evaluating Examples"),
+        start=1
+    ):
 
         summary = str(s)
         judgment = str(j)
@@ -53,38 +60,24 @@ def run_evaluation(csv_path):
         )
 
         # Accuracy
-        # acc = AccuracyCalculator().compute_accuracy(
-        #     conversation_text=c,
-        #     judgment_text=judgment,
-
-        # )['accuracy_score']
         calculator = AccuracyCalculator()
-
         result = calculator.compute_accuracy(
             conversation_text=c,
-            llm_response_text=s,  
+            llm_response_text=s,
             judgment_text=j,
-            mode="precision"       
+            mode="precision"
         )
-
         acc = result["accuracy_score"]
 
-
         # Completeness
-        # comp = CompletenessEvaluator().evaluate_completeness(
-        #     conversation=c,
-        #     summary=summary
-        # )['completeness_score']
         comp = CompletenessEvaluator().evaluate_completeness(
-        conversation=c,
-        judgment=summary
-    )['completeness_score']
-
+            conversation=c,
+            judgment=summary
+        )['completeness_score']
 
         # Relevance
         rel = relevance_module.compute(
             conversation=c,
-            summary=summary,
             judgment=judgment
         )
 
@@ -92,6 +85,7 @@ def run_evaluation(csv_path):
         clarity = ClarityCalculator().compute_clarity_score(c)['clarity_score']
 
         C_Path = ALPHA_S * f_s + ALPHA_N * nli_score
+
         J_Score = (
             weights["wA"] * acc +
             weights["wR"] * rel +
@@ -113,6 +107,7 @@ def run_evaluation(csv_path):
         })
 
     return results
+
 
 
 def evaluate_single(summary, conversation, judgment):

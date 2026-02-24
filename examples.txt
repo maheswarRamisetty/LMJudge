@@ -56,3 +56,37 @@ customer intent
 agent action
 
 Your completeness metric wrongly penalizes this.
+
+
+Average Embedding Score: 0.7675
+Average NLI Score: 0.6009
+Average Accuracy: 0.1782
+Average Completeness: 0.1737
+Average Relevance: 0.4989
+Average Clarity: 0.6289
+Average JCJS: 0.5271
+Dataset One: first
+Average Embedding Score: 0.7125
+Average NLI Score: 0.3972
+Average Accuracy: 0.4038
+Average Completeness: 0.4575
+Average Relevance: 0.5003
+Average Clarity: 0.6269
+Average JCJS: 0.5260
+Dataset Two: second
+Average Embedding Score: 0.7535
+Average NLI Score: 0.4180
+Average Accuracy: 0.3375
+Average Completeness: 0.4172
+Average Relevance: 0.5032
+Average Clarity: 0.6164
+Average JCJS: 0.5272
+Dataset Three: third
+Average Embedding Score: 0.7179
+Average NLI Score: 0.3706
+Average Accuracy: 0.4539
+Average Completeness: 0.4664
+Average Relevance: 0.5186
+Average Clarity: 0.6419
+Average JCJS: 0.5322
+Dataset Four: fourth

@@ -193,7 +193,7 @@ def run_and_append(csv_path, output_csv):
 
 
 if __name__=="__main__":
-    OUTPUT_CSV = "three_output.csv"
+    OUTPUT_CSV = "two_output.csv"
     run_and_append(DATA_PATH,OUTPUT_CSV)
     
     

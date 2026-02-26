@@ -8,7 +8,7 @@ def load_csv(main_path, conv_path):
 
     # print(df_conv['completion'].head())
     
-    df_main['call_conversation'] = df_conv['completion']
+    df_main['call_conversation'] = df_conv['text']
     df_main.to_csv(DATA_PATH, index=False)
     return df_main
 
@@ -30,23 +30,23 @@ def x(path):
     print(f"Average JCJS: {jcjs_avg:.4f}")
 
 if __name__ == "__main__":
-    # df = load_csv(DATA_PATH, CALL_CONV_PATH)
-    # print(df.head())
+    df = load_csv(DATA_PATH, CALL_CONV_PATH)
+    print(df.head())
 
-    # df = pd.read_csv(DATA_PATH)
-    # df.to_csv("data_with_call_merged_five.csv",index=False)
-    # print("File Saved")
+    df = pd.read_csv(DATA_PATH)
+    df.to_csv("data_with_call_merged_two.csv",index=False)
+    print("File Saved")
 
-    path1 = "./data/one/output.csv"
-    # df2 = pd.read_csv("./data/two/two_output.csv")
-    path2 = "./data/three/three_output.csv"
-    path3 = "./data/four/four_output.csv"
-    path4 = "./data/five/five_output.csv"
+    # path1 = "./data/one/output.csv"
+    # # df2 = pd.read_csv("./data/two/two_output.csv")
+    # path2 = "./data/three/three_output.csv"
+    # path3 = "./data/four/four_output.csv"
+    # path4 = "./data/five/five_output.csv"
 
-    print("Dataset One:",x(path1))
-    print("Dataset Two:",x(path2))
-    print("Dataset Three:",x(path3))
-    print("Dataset Four:",x(path4))
+    # print("Dataset One:",x(path1))
+    # print("Dataset Two:",x(path2))
+    # print("Dataset Three:",x(path3))
+    # print("Dataset Four:",x(path4))
     # df = pd.read_csv("../data")
     # unique_topics = df['topic'].dropna().unique()
     # # print(len(unique_topics))

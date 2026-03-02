@@ -30,12 +30,13 @@ def x(path):
     print(f"Average JCJS: {jcjs_avg:.4f}")
 
 if __name__ == "__main__":
-    df = load_csv(DATA_PATH, CALL_CONV_PATH)
-    print(df.head())
+    # df = load_csv(DATA_PATH, CALL_CONV_PATH)
+    # print(df.head())
 
-    df = pd.read_csv(DATA_PATH)
-    df.to_csv("data_with_call_merged_two.csv",index=False)
-    print("File Saved")
+    # df = pd.read_csv(DATA_PATH)
+    # df.to_csv("data_with_call_merged_two.csv",index=False)
+    # print("File Saved")
+    x("./two_output.csv")
 
     # path1 = "./data/one/output.csv"
     # # df2 = pd.read_csv("./data/two/two_output.csv")
